@@ -61,7 +61,7 @@ export default function AboutPage() {
 
       <div className="py-12">
         <Image
-          src="/assets/about/bn76fa8c01c3d1fe54cc39644ed0a5c66b40fe5r.jpg"
+          src="/assets/about/roadMap.png"
           width={1772.5}
           height={866}
           alt="Road map"
