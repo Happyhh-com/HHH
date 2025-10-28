@@ -130,10 +130,6 @@ export default function ContactUs() {
        <div 
         className="aspect-[1251/295] overflow-hidden mx-20 cursor-pointer"
         >
-        {/* <a 
-          href="https://www.google.com/maps/dir//227+Thimmaiah+Road,+1st+Main+Rd,+off+West+of+Chord+Road,+1st+Stage,+Shivanagar,+Rajajinagar,+Bengaluru,+Karnataka+560010/@12.9889024,77.4643021,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae3d9b0100010f:0xb1d81aff77e03852!2m2!1d77.546704!2d12.9889154?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank"
-        /> */}
         <Image
         src="/assets/contact/53f75d0be0ff29d7255c420e4824cb931c31ab21.png"
         width={1251}
