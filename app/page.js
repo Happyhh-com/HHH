@@ -1,4 +1,6 @@
 import ButtonWithModal from "@/components/Button";
+import Image from "next/image";
+
 
 export default function HomePage() {
   return (
@@ -177,6 +179,100 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <div className="flex bg-[#E9F3FF] mb-5">
+        <div className="w-[33%] mt-12 mb-20 mx-25">
+          <span className="font-bold text-4xl text-[#1D2C55]">Featured Services</span>
+          <div className="w-[90%] aspect-[371/295] flex justify-center">
+            <Image
+              src="/assets/Laboratory.png"
+              alt="Laboratory image"
+              width={371}
+              height={295}
+              className="rounded-l-3xl h-full w-full object-cover"
+            />
+          </div>
+          <span>Our team has successfully addressed a wide range of health concerns, from chronic illnesses to preventive care. We are dedicated to providing comprehensive solutions that empower individuals to take charge of their health.</span>
+          <button className="text-white bg-[#AD2525] rounded-3xl py-3 px-15 font-semibold mt-5 block">
+            Explore More
+          </button>
+
+        </div>
+
+        <div className="w-[67%] mr-25">
+          <p className="mt-18"><span className="font-bold text-2xl text-[#2B7B37]">Happy Healthy Hospital</span><span className="font-bold text-2xl"> transforms patient</span></p>
+          <p className="font-bold text-2xl mb-5">outcomes across health issues</p>
+          <span>Welcome to Happy Health Hospital, where your well-being is our top priority. Our state-of-the-art facility offers a wide range of services, from emergency care to specialized treatments. With a team of dedicated professionals, we ensure that every patient receives personalized attention and compassionate care. Our modern amenities and advanced technology create a healing environment that promotes recovery and wellness. Whether you need routine check-ups or complex surgeries, Harmony Health Hospital is here to support you every step of the way.</span>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4  my-4 w-[85%]">
+            <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 w-5/6">
+              <div className="w-12 h-12">
+                <Image
+                  src="/assets/Laser Treatments.png"
+                  alt="Laser Treatments"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-medium">Laser Treatments</span>
+            </div>
+
+            <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 w-5/6">
+              <div className="w-12 h-12">
+                <Image
+                  src="/assets/Chronic & Lifestyle Diseases.png"
+                  alt="Chronic & Lifestyle Diseases"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-medium">Chronic & Lifestyle Diseases</span>
+            </div>
+
+            <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 w-5/6">
+              <div className="w-12 h-12">
+                <Image
+                  src="/assets/Laparoscopic Surgeries.png"
+                  alt="Laparoscopic Surgeries"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-medium">Laparoscopic Surgeries</span>
+            </div>
+
+            <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 w-5/6">
+              <div className="w-12 h-12">
+                <Image
+                  src="/assets/General Surgical Procedures.png"
+                  alt="General Surgical Procedures"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-medium">General Surgical Procedures</span>
+            </div>
+
+            <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 w-5/6">
+              <div className="w-12 h-12">
+                <Image
+                  src="/assets/Other Specialties.png"
+                  alt="Other Specialties"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-medium">Other Specialties</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

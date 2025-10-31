@@ -114,7 +114,7 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <button type="submit" className="text-white bg-red-700 rounded-3xl py-3 px-18 font-semibold mx-15">
+            <button type="submit" className="text-white bg-[#AD2525] rounded-3xl py-3 px-18 font-semibold mx-15">
               Submit
             </button>
             
