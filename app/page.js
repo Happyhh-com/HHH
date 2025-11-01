@@ -73,7 +73,6 @@ export default function HomePage() {
           </h1>
         </div>
         <div className="flex flex-wrap gap-7 ml-[1vw] mt-8">
-          {/* Card 1 */}
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
               src="/assets/homepage1.png"
@@ -81,14 +80,12 @@ export default function HomePage() {
               className="w-full h-full object-cover rounded-xl"
             />
 
-            {/* Default Text */}
             <div className="absolute inset-0 flex ml-[1vw] items-end pb-4 text-black font-bold text-2xl transition-opacity duration-300 group-hover:opacity-0">
               Compassionate, Patient-
               <br />
               Centered Care
             </div>
 
-            {/* Hover Overlay */}
             <div className="absolute inset-0 flex flex-col bg-white/60 backdrop-blur-lg backdrop-saturate-150 backdrop-contrast-125 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.02]">
               <div className="text-[#2B7B37] font-bold text-2xl ml-[2vw] mt-[3vh]">
                 Compassionate, Patient-
@@ -104,7 +101,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
               src="/assets/homepage2.png"
@@ -112,14 +108,12 @@ export default function HomePage() {
               className="w-full h-full object-cover rounded-xl"
             />
 
-            {/* Default Text */}
             <div className="absolute inset-0 flex ml-[1vw] items-end pb-4 text-black font-bold text-2xl transition-opacity duration-300 group-hover:opacity-0">
               Experienced Medical
               <br />
               Professionals
             </div>
 
-            {/* Hover Overlay */}
             <div className="absolute inset-0 flex flex-col bg-white/60 backdrop-blur-lg backdrop-saturate-150 backdrop-contrast-125 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.02]">
               <div className="text-[#2B7B37] font-bold text-2xl ml-[2vw] mt-[3vh]">
                 Experienced Medical
