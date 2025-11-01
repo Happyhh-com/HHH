@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonWithModal from "./Button";
 
 const DoctorCard = () => {
   return (
@@ -27,10 +28,19 @@ const DoctorCard = () => {
             <p className="text-sm text-gray-500">Experience</p>
             <p className="text-base font-medium text-gray-800">6 Years</p>
           </div>
-          <button className="px-5 py-2 border border-[#970000] text-[#000] font-semibold rounded-full hover:bg-[#970000] hover:text-white transition">
-            Book an Appointment
-          </button>
-           <button className="px-5 py-2 border border-[#970000] text-[#000] font-semibold rounded-full hover:bg-[#970000] hover:text-white transition">
+          <ButtonWithModal
+            className="bg-red-600 hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
+            buttonText="Book An Appointment"
+          >
+            <h2 className="text-lg font-semibold mb-2">
+              Hello from the Modal!
+            </h2>
+            <p className="text-gray-600">
+              This modal opens when you click the button. You can put any
+              content here.
+            </p>
+          </ButtonWithModal>
+          <button className="w-[12vw] h-[5vh] border border-[#970000] text-[#000] font-semibold rounded-full hover:bg-green-700 hover:text-white transition">
             View Details
           </button>
         </div>
