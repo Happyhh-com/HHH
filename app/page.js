@@ -71,7 +71,6 @@ export default function HomePage() {
           </h1>
         </div>
         <div className="flex flex-wrap gap-7 ml-[1vw] mt-8">
-          {/* Card 1 */}
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
               src="/assets/homepage1.png"
@@ -79,14 +78,12 @@ export default function HomePage() {
               className="w-full h-full object-cover rounded-xl"
             />
 
-            {/* Default Text */}
             <div className="absolute inset-0 flex ml-[1vw] items-end pb-4 text-black font-bold text-2xl transition-opacity duration-300 group-hover:opacity-0">
               Compassionate, Patient-
               <br />
               Centered Care
             </div>
 
-            {/* Hover Overlay */}
             <div className="absolute inset-0 flex flex-col bg-white/60 backdrop-blur-lg backdrop-saturate-150 backdrop-contrast-125 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.02]">
               <div className="text-[#2B7B37] font-bold text-2xl ml-[2vw] mt-[3vh]">
                 Compassionate, Patient-
@@ -102,7 +99,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
               src="/assets/homepage2.png"
@@ -110,14 +106,12 @@ export default function HomePage() {
               className="w-full h-full object-cover rounded-xl"
             />
 
-            {/* Default Text */}
             <div className="absolute inset-0 flex ml-[1vw] items-end pb-4 text-black font-bold text-2xl transition-opacity duration-300 group-hover:opacity-0">
               Experienced Medical
               <br />
               Professionals
             </div>
 
-            {/* Hover Overlay */}
             <div className="absolute inset-0 flex flex-col bg-white/60 backdrop-blur-lg backdrop-saturate-150 backdrop-contrast-125 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.02]">
               <div className="text-[#2B7B37] font-bold text-2xl ml-[2vw] mt-[3vh]">
                 Experienced Medical
@@ -174,6 +168,167 @@ export default function HomePage() {
           <div className="bg-[#2B7B37] hover:bg-gradient-to-r hover:from-[#0D2040] hover:to-[#1C5634] transition-all duration-500 w-[30vw] h-[15vh] rounded-[2rem] flex flex-col items-center justify-center text-white">
             <h1 className="text-4xl font-extrabold">1M+</h1>
             <p className="text-lg font-medium mt-1">Happy Patients</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex  flex-row h-[85vh] bg-[#E9F3FFC7]">
+        <div className="flex flex-col ml-[4vw] mt-[5vh] w-[40vw]">
+          <div className="text-[#203169] text-4xl font-bold">
+            Featured Services
+          </div>
+          <div className="">
+            <img
+              src="/assets/home/featuredService.png"
+              alt="Image 1"
+              className="w-[30vw] h-[40vh]"
+            />
+            <div>
+              Our team has successfully addressed a wide range of <br />
+              health concerns, from chronic illnesses to preventive
+              <br />
+              care. We are dedicated to providing comprehensive <br />
+              solutions that empower individuals to take charge of <br />
+              their health.
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col ml-[4vw] mt-[5vh] w-[40vw]">
+          <h1 className="font-bold text-2xl ">
+            <span className="text-[#2B7B37]">HAPPY HEALTHY HOSPITAL </span>
+            <span>
+              transforms patient
+              <br /> outcomes across health issues
+            </span>
+          </h1>
+          <div className="text-sm mt-[2vh]">
+            Welcome to Happy Health Hospital, where your well-being is our top
+            priority. Our state-of-the-art
+            <br />
+            facility offers a wide range of services, from emergency care to
+            specialized treatments. With a team
+            <br />
+            of dedicated professionals, we ensure that every patient receives
+            personalized attention and <br />
+            compassionate care. Our modern amenities and advanced technology
+            create a healing <br />
+            environment that promotes recovery and wellness. Whether you need
+            routine check-ups or
+            <br />
+            complex surgeries, Harmony Health Hospital is here to support you
+            every step of the way.
+          </div>
+          <div className="flex flex-row mt-[7vh] gap-8">
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+
+               <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+
+               <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+
+               <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+              
+               <div className="flex flex-row h-[7vh] w-[17vw] bg-[#2B7B3724] rounded-xl items-center">
+                <div className="flex items-center justify-center w-[30%]">
+                  <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[4vh] w-[4vh]">
+                    <img
+                      src="/assets/home/laser.png"
+                      alt="laser"
+                      className="h-[2vh] w-[2vh] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center w-[70%] pl-2">
+                  <span className="text-[#2B7B37] font-medium">
+                    Laser center
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
