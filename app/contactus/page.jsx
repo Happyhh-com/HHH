@@ -1,6 +1,5 @@
 'use client'
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function ContactUs() {
   const router = useRouter();
@@ -13,15 +12,15 @@ export default function ContactUs() {
       <div className="px-8 flex space-x-2 font-semibold text-gray-400 mt-11 ml-11"> 
         <span onClick={() => router.push('/')} className="cursor-pointer hover:underline">Home</span>
         <span>/</span>
-        <span className="text-green-600 transition cursor-pointer">Contact us</span>
+        <span className="text-[#2B7B37] transition cursor-pointer">Contact us</span>
       </div>
 
-      <p className="px-8 font-bold m-11 text-4xl text-blue-900">Contact us</p>
+      <p className="px-8 font-bold m-11 text-4xl text-[#203169]">Contact us</p>
       <p className="px-8 m-11">Welcome to Happy Health Hospital, where your well-being is our top priority. Our state-of-the-art facility offers a wide range of services, from emergency care to specialized treatments. With a team of dedicated professionals, we ensure that every patient receives personalized attention and compassionate care. Our modern amenities and advanced technology create a healing environment that promotes recovery and wellness. Whether you need routine check-ups or complex surgeries, Harmony Health Hospital is here to support you every step of the way.</p>
 
       <div className="flex mx-20">
         <div className="w-[45%] aspect-[543/611] overflow-hidden">
-          <Image
+          <img
             src="/assets/contact/e962fb0acaee19a6b4e05981b5ead60b41d3b9fa.jpeg"
             alt="Blue background image"
             width={543}
@@ -130,7 +129,7 @@ export default function ContactUs() {
        <div 
         className="aspect-[1251/295] overflow-hidden mx-20 cursor-pointer"
         >
-        <Image
+        <img
         src="/assets/contact/53f75d0be0ff29d7255c420e4824cb931c31ab21.png"
         width={1251}
         height={295}
@@ -143,7 +142,7 @@ export default function ContactUs() {
 
        <div className="flex mx-20 my-10">
         <div className="w-[62%] py-20 aspect-[748/560] overflow-hidden">
-          <Image
+          <img
           src="/assets/contact/e3a941db277091460a3d27d36a4cccb06abf44e3.png"
           width={748}
           height={560}
