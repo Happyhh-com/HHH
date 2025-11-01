@@ -1,7 +1,35 @@
+"use client";
+
 import ButtonWithModal from "@/components/Button";
-import Image from "next/image";
+import { useRef, useEffect } from "react";
 
 export default function HomePage() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
+  }, []);
+
+  const scrollLeft = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth =
+        container.children[0].offsetWidth + parseInt(getComputedStyle(container).gap || "0");
+      container.scrollBy({ left: -cardWidth, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth =
+        container.children[0].offsetWidth + parseInt(getComputedStyle(container).gap || "0");
+      container.scrollBy({ left: cardWidth, behavior: "smooth" });
+    }
+  };
+
   return (
     <main className=" bg-white">
       <section
@@ -179,7 +207,7 @@ export default function HomePage() {
             Featured Services
           </span>
           <div className="w-[90%] aspect-[371/295] flex justify-center">
-            <Image
+            <img
               src="/assets/Laboratory.png"
               alt="Laboratory image"
               width={371}
@@ -277,8 +305,136 @@ export default function HomePage() {
               <span className="font-medium">Other Specialties</span>
             </div>
           </div>
+
         </div>
       </div>
+
+      <div>
+        <img
+          src="/assets/home/Director Bio.png"
+          alt="Director Bio"
+          width={1474}
+          height={292}
+          className="h-full w-full object-contain"
+        />
+      </div>
+
+      <div className="flex flex-col ml-6 sm:ml-10 md:ml-16 lg:ml-20 my-4">
+        <span className="text-[#2B7B37] mb-2 text-sm sm:text-base md:text-lg">
+          TESTIMONIAL
+        </span>
+
+        <div className="flex items-center justify-between flex-wrap gap-3">
+          <span className="text-[#1D2C55] font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug">
+            Real Stories, Real Impact - hear from our happy patients
+          </span>
+
+          <div className="mr-10 flex items-center gap-3">
+            <button onClick={scrollLeft} className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition">
+              &lt;
+            </button>
+            <button onClick={scrollRight} className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition">
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-[5vw]">
+        <div ref={scrollRef} className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
+              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
+              patient, and explained everything clearly. I’m so grateful for the care I received here.
+            </span>
+
+            <div className="flex items-center gap-3 mx-8 mb-10">
+              <img
+                src="/assets/home/Testimony 1.png"
+                alt="Testimony 1"
+                className="w-20 h-20 rounded-full object-cover"
+              />
+              <span className="text-white whitespace-normal text-base leading-relaxed">1 Amit.B</span>
+            </div>
+          </div>
+
+          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
+              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
+              patient, and explained everything clearly. I’m so grateful for the care I received here.
+            </span>
+
+            <div className="flex items-center gap-3 mx-8 mb-10">
+              <img
+                src="/assets/home/Testimony 1.png"
+                alt="Testimony 1"
+                className="w-20 h-20 rounded-full object-cover"
+              />
+              <span className="text-white whitespace-normal text-base leading-relaxed">2 Amit.B</span>
+            </div>
+          </div>
+
+          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
+              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
+              patient, and explained everything clearly. I’m so grateful for the care I received here.
+            </span>
+
+            <div className="flex items-center gap-3 mx-8 mb-10">
+              <img
+                src="/assets/home/Testimony 1.png"
+                alt="Testimony 1"
+                className="w-20 h-20 rounded-full object-cover"
+              />
+              <span className="text-white whitespace-normal text-base leading-relaxed">3 Amit.B</span>
+            </div>
+          </div>
+
+          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
+              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
+              patient, and explained everything clearly. I’m so grateful for the care I received here.
+            </span>
+
+            <div className="flex items-center gap-3 mx-8 mb-10">
+              <img
+                src="/assets/home/Testimony 1.png"
+                alt="Testimony 1"
+                className="w-20 h-20 rounded-full object-cover"
+              />
+              <span className="text-white whitespace-normal text-base leading-relaxed">4 Amit.B</span>
+            </div>
+          </div>
+
+          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
+              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
+              patient, and explained everything clearly. I’m so grateful for the care I received here.
+            </span>
+
+            <div className="flex items-center gap-3 mx-8 mb-10">
+              <img
+                src="/assets/home/Testimony 1.png"
+                alt="Testimony 1"
+                className="w-20 h-20 rounded-full object-cover"
+              />
+              <span className="text-white whitespace-normal text-base leading-relaxed">5 Amit.B</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+        <img
+          src="/assets/home/Emergency & Ambulance Support.png"
+          alt="Emergency & Ambulance Support"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+
     </main>
   );
 }

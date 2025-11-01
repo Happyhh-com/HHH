@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 export default function Footer(){
     return(
         <div className="flex bg-[#E9F3FF] p-4">
             <div className="w-[12%] flex justify-center py-13">
-                <Image
+                <img
                 src="/assets/footer/4497ae84ff655620cea0ad0e2ceed69f480f7cfa.png"
                 alt="Happy Health Hospital logo"
                 width={96}
@@ -37,28 +35,28 @@ export default function Footer(){
             <div className="w-[20%] flex flex-col mt-13 gap-4">
                 <span className="font-bold">FOLLOW US ON</span>
                 <div className="flex gap-6">
-                    <Image
+                    <img
                         src="/assets/footer/facebook.png"
                         alt="Facebook"
                         width={1}
                         height={1}
                         className="h-full w-[8%] object-contain"
                     />
-                    <Image
+                    <img
                         src="/assets/footer/instagram.png"
                         alt="Instagram"
                         width={1}
                         height={1}
                         className="h-full w-[8%] object-contain"
                     />
-                    <Image
+                    <img
                         src="/assets/footer/youtube.png"
                         alt="Youtube"
                         width={1}
                         height={1}
                         className="h-full w-[8%] object-contain"
                     />
-                    <Image
+                    <img
                         src="/assets/footer/twitter.png"
                         alt="Twitter"
                         width={1}
