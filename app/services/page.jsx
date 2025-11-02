@@ -143,10 +143,342 @@ export default function Services() {
             </div>
           </div>
 
+          <div className={`${active === "Laparoscopic Surgeries" ? "block" : "hidden"} mx-20 w-[76%]`}>
+            <p className="my-6 text-white text-xl font-bold">Laparoscopic Surgeries</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Prostatectomy.png"
+                    alt="Prostatectomy"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Prostatectomy</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Nephrectomy.png"
+                    alt="Nephrectomy"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Nephrectomy</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Appendix Removal.png"
+                    alt="Appendix Removal"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Appendix Removal</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Gallbladder Stones.png"
+                    alt="Gallbladder Stones"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white block whitespace-normal break-words text-base leading-relaxed">Gallbladder Stones</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Varicocelectomy.png"
+                    alt="Varicocelectomy"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Varicocelectomy</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Hernia Repair.png"
+                    alt="Hernia Repair"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Hernia Repair</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div className={`${active === "Endoscopic & Bronchoscopic Services" ? "block" : "hidden"} mx-20 w-[76%]`}>
+            <p className="my-6 text-white text-xl font-bold">Endoscopic & Bronchoscopic Services</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Advanced internal diagnostics.png"
+                    alt="Advanced internal diagnostics"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Advanced internal diagnostics</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div className={`${active === "Other Specialties" ? "block" : "hidden"} mx-20 w-[76%]`}>
+            <p className="my-6 text-white text-xl font-bold">Other Specialties</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/General Medicine.png"
+                    alt="General Medicine"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">General Medicine</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Nephrology.png"
+                    alt="Nephrology"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Nephrology</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/ENT.png"
+                    alt="ENT"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">ENT</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Orthopedics.png"
+                    alt="Orthopedics"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white block whitespace-normal break-words text-base leading-relaxed">Orthopedics</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Cardiology.png"
+                    alt="Cardiology"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Cardiology</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Dietician Nutrition.png"
+                    alt="Dietician Nutrition"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Dietician/Nutrition</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Plastic & Cosmetic Surgery.png"
+                    alt="Plastic & Cosmetic Surgery"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Plastic & Cosmetic Surgery</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Ophthalmology.png"
+                    alt="Ophthalmology"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Ophthalmology</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div className={`${active === "General Surgical Procedures" ? "block" : "hidden"} mx-20 w-[76%]`}>
+            <p className="my-6 text-white text-xl font-bold">General Surgical Procedures</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Gallstones.png"
+                    alt="Gallstones"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Gallstones</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Hernia Repair.png"
+                    alt="Hernia Repair"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Hernia Repair</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Haemorrhoids (Piles).png"
+                    alt="Haemorrhoids (Piles)"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Haemorrhoids (Piles)</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Appendicitis.png"
+                    alt="Appendicitis"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white block whitespace-normal break-words text-base leading-relaxed">Appendicitis</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Stomach & Intestinal Cancer.png"
+                    alt="Stomach & Intestinal Cancer"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Stomach & Intestinal Cancer</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div className={`${active === "Chronic & Lifestyle Diseases" ? "block" : "hidden"} mx-20 w-[76%]`}>
+            <p className="my-6 text-white text-xl font-bold">Chronic & Lifestyle Diseases</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Chronic Kidney Disease (CKD).png"
+                    alt="Chronic Kidney Disease (CKD)"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Chronic Kidney Disease (CKD)</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Kidney Stones.png"
+                    alt="Kidney Stones"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Kidney Stones</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Prostate Health.png"
+                    alt="Prostate Health"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white">Prostate Health</span>
+              </div>
+
+              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
+                  <img
+                    src="/assets/services/Diabetes Management.png"
+                    alt="Diabetes Management"
+                    className="h-[3vh] w-[3vw] object-contain"
+                  />
+                </div>
+                <span className="font-medium text-white block whitespace-normal break-words text-base leading-relaxed">Diabetes Management</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
 
+      <div className="my-20 mx-30">
+        <p className="font-bold my-5 text-4xl text-center text-[#203169]">What Patients Can Expect</p>
+        <p className="text-center mx-40">At our hospital, every patient experience is designed with care, comfort, and outcomes in mind. Here’s what you can expect when you choose our services</p>
 
+        <div className="gap-4 flex felx-col">
+
+          <div className="w-[25%] my-5 rounded-2xl" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-2xl text-center">Personalized Care Plans</p>
+            <p className="mx-8 mb-5 text-white block text-center">Customised to your condition, preferences, and recovery goals.</p>
+          </div>
+
+          <div className="w-[25%] my-5 rounded-2xl" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">Expert Consultations</p>
+            <p className="mx-8 mb-5 text-white block text-center">with leading specialists across departments—from surgery and general medicine to nephrology and cardiology.</p>
+          </div>
+
+          <div className="w-[25%] my-5 rounded-2xl" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">Seamless Coordination</p>
+            <p className="mx-8 mb-5 text-white block text-center">between departments for smooth transitions—from diagnosis to treatment to rehabilitation.</p>
+          </div>
+
+          <div className="w-[25%] my-5 rounded-2xl" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">Holistic Wellness Support</p>
+            <p className="mx-8 mb-5 text-white block text-center">including diet and nutrition counseling, chronic disease management, and follow-up care.</p>
+          </div>
+
+        </div>
+
+      </div>
     </>
   );
 }
