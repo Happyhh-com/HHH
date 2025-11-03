@@ -17,7 +17,7 @@ export default function Doctors() {
         </span>
         <span>/</span>
         <span className="text-green-600 transition cursor-pointer">
-          doctors
+          Doctors
         </span>
       </div>
 

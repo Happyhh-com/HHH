@@ -1,9 +1,13 @@
 "use client";
 
 import ButtonWithModal from "@/components/Button";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 import { useRef, useEffect } from "react";
 
 export default function HomePage() {
+  const router = useRouter();
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -16,7 +20,8 @@ export default function HomePage() {
     const container = scrollRef.current;
     if (container) {
       const cardWidth =
-        container.children[0].offsetWidth + parseInt(getComputedStyle(container).gap || "0");
+        container.children[0].offsetWidth +
+        parseInt(getComputedStyle(container).gap || "0");
       container.scrollBy({ left: -cardWidth, behavior: "smooth" });
     }
   };
@@ -25,7 +30,8 @@ export default function HomePage() {
     const container = scrollRef.current;
     if (container) {
       const cardWidth =
-        container.children[0].offsetWidth + parseInt(getComputedStyle(container).gap || "0");
+        container.children[0].offsetWidth +
+        parseInt(getComputedStyle(container).gap || "0");
       container.scrollBy({ left: cardWidth, behavior: "smooth" });
     }
   };
@@ -64,13 +70,7 @@ export default function HomePage() {
           <ButtonWithModal
             className="bg-red-600 hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8"
             buttonText="Book An Appointment"
-          >
-            <h2 className="text-2xl font-bold mb-2">Hello from the Modal!</h2>
-            <p className="text-gray-600">
-              This modal opens when you click the button. You can put any
-              content here.
-            </p>
-          </ButtonWithModal>
+          />
 
           <div className="flex items-center mt-8">
             <img
@@ -88,6 +88,16 @@ export default function HomePage() {
               <h1 className="ml-2 text-2xl font-bold text-[#FFD400]">4.5</h1>
               <h3 className="ml-2 font-semibold text-white">Google Reviews</h3>
             </div>
+          </div>
+
+          <div
+            onClick={() => router.push("/doctors")}
+            className="flex justify-around items-center w-[14vw] h-[6vh] mt-[5vh] bg-white px-5 py-3 rounded-full  shadow-md text-[#1E3A8A] font-semibold text-sm cursor-pointer"
+          >
+            Find a Doctor
+            <button className="ml-3 bg-[#B91C1C] text-white p-2 rounded-full hover:bg-[#991B1B] transition">
+              <ArrowRight size={14} />
+            </button>
           </div>
         </div>
       </section>
@@ -305,7 +315,6 @@ export default function HomePage() {
               <span className="font-medium">Other Specialties</span>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -330,10 +339,16 @@ export default function HomePage() {
           </span>
 
           <div className="mr-10 flex items-center gap-3">
-            <button onClick={scrollLeft} className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition">
+            <button
+              onClick={scrollLeft}
+              className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition"
+            >
               &lt;
             </button>
-            <button onClick={scrollRight} className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition">
+            <button
+              onClick={scrollRight}
+              className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#1D2C55] hover:bg-gray-100 transition"
+            >
               &gt;
             </button>
           </div>
@@ -341,12 +356,18 @@ export default function HomePage() {
       </div>
 
       <div className="px-[5vw]">
-        <div ref={scrollRef} className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-
-          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          <div
+            className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4"
+            style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
+          >
             <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
-              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
-              patient, and explained everything clearly. I’m so grateful for the care I received here.
+              From the moment I walked in, I felt I was in good hands. The
+              doctors and nurses were kind, patient, and explained everything
+              clearly. I’m so grateful for the care I received here.
             </span>
 
             <div className="flex items-center gap-3 mx-8 mb-10">
@@ -355,14 +376,20 @@ export default function HomePage() {
                 alt="Testimony 1"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <span className="text-white whitespace-normal text-base leading-relaxed">1 Amit.B</span>
+              <span className="text-white whitespace-normal text-base leading-relaxed">
+                1 Amit.B
+              </span>
             </div>
           </div>
 
-          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+          <div
+            className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4"
+            style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
+          >
             <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
-              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
-              patient, and explained everything clearly. I’m so grateful for the care I received here.
+              From the moment I walked in, I felt I was in good hands. The
+              doctors and nurses were kind, patient, and explained everything
+              clearly. I’m so grateful for the care I received here.
             </span>
 
             <div className="flex items-center gap-3 mx-8 mb-10">
@@ -371,14 +398,20 @@ export default function HomePage() {
                 alt="Testimony 1"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <span className="text-white whitespace-normal text-base leading-relaxed">2 Amit.B</span>
+              <span className="text-white whitespace-normal text-base leading-relaxed">
+                2 Amit.B
+              </span>
             </div>
           </div>
 
-          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+          <div
+            className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4"
+            style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
+          >
             <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
-              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
-              patient, and explained everything clearly. I’m so grateful for the care I received here.
+              From the moment I walked in, I felt I was in good hands. The
+              doctors and nurses were kind, patient, and explained everything
+              clearly. I’m so grateful for the care I received here.
             </span>
 
             <div className="flex items-center gap-3 mx-8 mb-10">
@@ -387,14 +420,20 @@ export default function HomePage() {
                 alt="Testimony 1"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <span className="text-white whitespace-normal text-base leading-relaxed">3 Amit.B</span>
+              <span className="text-white whitespace-normal text-base leading-relaxed">
+                3 Amit.B
+              </span>
             </div>
           </div>
 
-          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+          <div
+            className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4"
+            style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
+          >
             <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
-              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
-              patient, and explained everything clearly. I’m so grateful for the care I received here.
+              From the moment I walked in, I felt I was in good hands. The
+              doctors and nurses were kind, patient, and explained everything
+              clearly. I’m so grateful for the care I received here.
             </span>
 
             <div className="flex items-center gap-3 mx-8 mb-10">
@@ -403,14 +442,20 @@ export default function HomePage() {
                 alt="Testimony 1"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <span className="text-white whitespace-normal text-base leading-relaxed">4 Amit.B</span>
+              <span className="text-white whitespace-normal text-base leading-relaxed">
+                4 Amit.B
+              </span>
             </div>
           </div>
 
-          <div className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4" style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}>
+          <div
+            className="m-5 flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[60%] md:basis-[45%] lg:basis-[30%] rounded-2xl snap-start h-auto shadow-lg hover:scale-105 transition-transform duration-300 p-4"
+            style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
+          >
             <span className="my-5 mx-8 text-white block whitespace-normal break-words text-base leading-relaxed">
-              From the moment I walked in, I felt I was in good hands. The doctors and nurses were kind,
-              patient, and explained everything clearly. I’m so grateful for the care I received here.
+              From the moment I walked in, I felt I was in good hands. The
+              doctors and nurses were kind, patient, and explained everything
+              clearly. I’m so grateful for the care I received here.
             </span>
 
             <div className="flex items-center gap-3 mx-8 mb-10">
@@ -419,11 +464,12 @@ export default function HomePage() {
                 alt="Testimony 1"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <span className="text-white whitespace-normal text-base leading-relaxed">5 Amit.B</span>
+              <span className="text-white whitespace-normal text-base leading-relaxed">
+                5 Amit.B
+              </span>
             </div>
           </div>
         </div>
-
       </div>
 
       <div>
@@ -433,8 +479,6 @@ export default function HomePage() {
           className="w-full h-full object-cover"
         />
       </div>
-
-
     </main>
   );
 }
