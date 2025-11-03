@@ -36,8 +36,8 @@ const Header = () => {
             </h1>
           ))}
         </nav>
-        <ButtonWithModal
-          className="bg-red-600 hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
+        {/* <ButtonWithModal
+          className="bg-red-600 hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold"
           buttonText="Book An Appointment"
         >
           <h2 className="text-lg font-semibold mb-2">Hello from the Modal!</h2>
@@ -45,7 +45,11 @@ const Header = () => {
             This modal opens when you click the button. You can put any content
             here.
           </p>
-        </ButtonWithModal>
+        </ButtonWithModal> */}
+         <ButtonWithModal
+            className="bg-red-600 hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
+            buttonText="Book An Appointment"
+          />
       </div>
     </header>
   );
