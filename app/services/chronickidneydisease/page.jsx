@@ -1,7 +1,7 @@
 "use client";
+
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import DoctorCard from "@/components/DoctorCard";
+import { useState } from "react";
 
 export default function CKD() {
   const router = useRouter();
@@ -22,6 +22,36 @@ export default function CKD() {
     "Heart failure (Congestive Heart Failure)",
     "Osteoarthritis (Degenerative Joint Disease)",
   ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: " What are your office hours?",
+      answer: "Our office hours vary by location, but typically we are open Monday through Friday from 8:00 AM to 5:00 PM. Some locations may offer extended hours or weekend appointments. Please contact your nearest clinic for specific hours."
+    },
+    {
+      question: "How can I schedule an appointment?",
+      answer: "Our office hours vary by location, but typically we are open Monday through Friday from 8:00 AM to 5:00 PM. Some locations may offer extended hours or weekend appointments. Please contact your nearest clinic for specific hours."
+    },
+    {
+      question: "Do you accept insurance?",
+      answer: "Our office hours vary by location, but typically we are open Monday through Friday from 8:00 AM to 5:00 PM. Some locations may offer extended hours or weekend appointments. Please contact your nearest clinic for specific hours."
+    },
+    {
+      question: "What should I bring to my appointment?",
+      answer: "Our office hours vary by location, but typically we are open Monday through Friday from 8:00 AM to 5:00 PM. Some locations may offer extended hours or weekend appointments. Please contact your nearest clinic for specific hours."
+    },
+    {
+      question: "Do you offer telemedicine appointments?",
+      answer: "Our office hours vary by location, but typically we are open Monday through Friday from 8:00 AM to 5:00 PM. Some locations may offer extended hours or weekend appointments. Please contact your nearest clinic for specific hours."
+    }
+  ]
+
   return (
     <>
       <div className="px-8 flex space-x-2 font-semibold text-gray-400 mt-11 ml-11">
@@ -463,6 +493,56 @@ export default function CKD() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mx-30 my-10">
+        <span className="text-[#020043] text-3xl font-bold">Frequently Asked Question</span>
+
+        <div className="space-y-4 my-5">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={index}
+                className={` bg-white shadow-sm transition-all duration-300 ${isOpen ? "shadow-md" : ""
+                  }`}
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full bg-[#EEFFF1] text-left px-4 py-3 flex justify-between items-center focus:outline-none"
+                >
+                  <span
+                    className={`text-base sm:text-xl font-medium transition-colors duration-200 ${isOpen ? "text-[#2B7B37]" : "text-[#020043]"
+                      }`}
+                  >
+                    {faq.question}
+                  </span>
+
+                  <svg
+                    className={`w-5 h-5 transform transition-transform duration-300 ${isOpen ? "rotate-90 text-[#2B7B37]" : "rotate-0 text-gray-500"
+                      }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+
+                {isOpen && (
+                  <div className="px-4 pb-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
