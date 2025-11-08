@@ -617,7 +617,8 @@ export default function Services() {
             style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
           >
             <p className="mt-17 mb-5 mx-7 block text-white font-bold text-2xl text-center">
-              Personalized Care Plans
+              Personalized <br />
+              Care Plans
             </p>
             <p className="mx-8 mb-5 text-white block text-center">
               Customised to your condition, preferences, and recovery goals.
@@ -628,8 +629,9 @@ export default function Services() {
             className="w-[25%] my-5 rounded-2xl"
             style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
           >
-            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">
-              Expert Consultations
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-2xl text-center">
+              Expert <br />
+              Consultations
             </p>
             <p className="mx-8 mb-5 text-white block text-center">
               with leading specialists across departments—from surgery and
@@ -641,8 +643,9 @@ export default function Services() {
             className="w-[25%] my-5 rounded-2xl"
             style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
           >
-            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">
-              Seamless Coordination
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-2xl text-center">
+              Seamless <br />
+              Coordination
             </p>
             <p className="mx-8 mb-5 text-white block text-center">
               between departments for smooth transitions—from diagnosis to
@@ -654,8 +657,9 @@ export default function Services() {
             className="w-[25%] my-5 rounded-2xl"
             style={{ background: "linear-gradient(135deg, #1D2C55, #1C5A25)" }}
           >
-            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-3xl text-center">
-              Holistic Wellness Support
+            <p className="mt-17 mb-5 mx-7 block text-white font-bold text-2xl text-center">
+              Holistic Wellness <br />
+              Support
             </p>
             <p className="mx-8 mb-5 text-white block text-center">
               including diet and nutrition counseling, chronic disease

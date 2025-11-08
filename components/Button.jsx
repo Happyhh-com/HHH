@@ -14,6 +14,7 @@ const ButtonWithModal = ({
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
@@ -22,18 +23,48 @@ const ButtonWithModal = ({
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    setIsOpen(false);
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://localhost:727/AppointmentDetails/post_AssigmentDetails",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            appointmentDetails: {
+              PatientName: formData.name,
+              PhoneNumber: formData.phone,
+              Email: formData.email,
+              PatientMessage: formData.message,
+            },
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit appointment");
+      }
+
+      const result = await response.json();
+      console.log("API Response:", result);
+
+      alert("✅ Appointment submitted successfully!");
+      setFormData({ name: "", phone: "", email: "", message: "" });
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
-      <button
-        onClick={handleOpen}
-        className={`text-white ${className}`}
-      >
+      <button onClick={handleOpen} className={`text-white ${className}`}>
         {buttonText}
       </button>
 
@@ -113,9 +144,12 @@ const ButtonWithModal = ({
 
               <button
                 type="submit"
-                className="w-full bg-green-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition"
+                disabled={loading}
+                className={`w-full ${
+                  loading ? "bg-gray-400" : "bg-green-600 hover:bg-red-700"
+                } text-white font-semibold py-2 rounded-lg transition`}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </form>
           </div>
