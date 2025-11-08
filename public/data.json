@@ -1,0 +1,20 @@
+{
+  "appointmentDetails": [
+    {
+      "Id": 2,
+      "PatientName": "TestPatient",
+      "PhoneNumber": "1234567890002",
+      "Email": "ncdncdnvdvdvmnc@vndvn.com",
+      "PatientMessage": "hii",
+      "CreatedDateTime": "2025-11-08T16:54:27.007"
+    },
+    {
+      "Id": 1,
+      "PatientName": "Patient1",
+      "PhoneNumber": "1234567890",
+      "Email": "emial@gmul.com",
+      "PatientMessage": "first message",
+      "CreatedDateTime": "2025-11-08T16:21:58.537"
+    }
+  ]
+}

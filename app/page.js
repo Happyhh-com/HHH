@@ -16,6 +16,25 @@ export default function HomePage() {
     }
   }, []);
 
+  useEffect(() => {
+    const fetchAppointments = async () => {
+      try {
+        const getResponse = await fetch(" /data.json");
+        if (!getResponse.ok) {
+          throw new Error("Failed to fetch appointments");
+        }
+
+        const data = await getResponse.json();
+        console.log("Appointments:", data);
+        setAppointments(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchAppointments();
+  }, []);
+
   const scrollLeft = () => {
     const container = scrollRef.current;
     if (container) {
