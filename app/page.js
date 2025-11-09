@@ -60,7 +60,7 @@ export default function HomePage() {
       <section
         className="relative h-[85vh] bg-cover bg-center flex items-center justify-start"
         style={{
-          backgroundImage: "url('/assets/homepage.png')",
+          backgroundImage: "url('/assets/home/homepage.png')",
         }}
       >
         <div
@@ -87,20 +87,20 @@ export default function HomePage() {
           </p>
 
           <ButtonWithModal
-            className="bg-red-600 hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8"
+            className="bg-[#AD2525] hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8"
             buttonText="Book An Appointment"
           />
 
           <div className="flex items-center mt-8">
             <img
-              src="/assets/Google.png"
+              src="/assets/home/Google.png"
               alt="Google"
               className="h-[3vh] w-auto object-contain"
             />
 
             <div className="flex items-center ml-3">
               <img
-                src="/assets/stars.png"
+                src="/assets/home/stars.png"
                 alt="Stars"
                 className="h-[4vh] w-auto object-contain"
               />
@@ -131,7 +131,7 @@ export default function HomePage() {
         <div className="flex flex-wrap gap-7 ml-[1vw] mt-8">
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
-              src="/assets/homepage1.png"
+              src="/assets/home/homepage1.png"
               alt="Image 1"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -159,7 +159,7 @@ export default function HomePage() {
 
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 shadow-lg">
             <img
-              src="/assets/homepage2.png"
+              src="/assets/home/homepage2.png"
               alt="Image 2"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -187,7 +187,7 @@ export default function HomePage() {
 
           <div className="relative w-[30vw] h-[35vh] group rounded-xl overflow-hidden border border-white/30 backdrop-blur-md bg-white/40 shadow-lg">
             <img
-              src="/assets/homepage3.png"
+              src="/assets/home/homepage3.png"
               alt="Image 3"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -237,7 +237,7 @@ export default function HomePage() {
           </span>
           <div className="w-[90%] aspect-[371/295] flex justify-center">
             <img
-              src="/assets/Laboratory.png"
+              src="/assets/home/Laboratory.png"
               alt="Laboratory image"
               width={371}
               height={295}
