@@ -8,7 +8,7 @@ export default function Services() {
 
   return (
     <>
-      <div className="px-8 flex space-x-2 font-semibold text-gray-400 mt-11 ml-11">
+      <div className="flex space-x-2 font-semibold text-gray-400 mt-11 ml-19">
         <span
           onClick={() => router.push("/")}
           className="cursor-pointer hover:underline"
@@ -21,7 +21,7 @@ export default function Services() {
         </span>
       </div>
 
-      <p className="px-8 font-bold m-11 text-4xl text-[#203169]">Services</p>
+      <p className="font-bold my-11 ml-19 text-4xl text-[#203169]">Services</p>
 
       <div className="flex mx-25">
         <div className="w-[47%] overflow-hidden">
@@ -81,107 +81,94 @@ export default function Services() {
           <div className="w-[24%] mb-15">
             <p
               onClick={() => setActive("Laser Treatments")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "Laser Treatments" ? "text-white" : "text-gray-500"
-              }`}
+              className={`cursor-pointer my-6 text-lg ${active === "Laser Treatments" ? "text-white" : "text-gray-500"
+                }`}
             >
               Laser Treatments
             </p>
             <div
-              className={`h-px ${
-                active === "Laser Treatments" ? "bg-white" : "bg-gray-500"
-              }`}
+              className={`h-px ${active === "Laser Treatments" ? "bg-white" : "bg-gray-500"
+                }`}
             ></div>
 
             <p
               onClick={() => setActive("Laparoscopic Surgeries")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "Laparoscopic Surgeries"
+              className={`cursor-pointer my-6 text-lg ${active === "Laparoscopic Surgeries"
                   ? "text-white"
                   : "text-gray-500"
-              }`}
+                }`}
             >
               Laparoscopic Surgeries
             </p>
             <div
-              className={`h-px ${
-                active === "Laparoscopic Surgeries" ? "bg-white" : "bg-gray-500"
-              }`}
+              className={`h-px ${active === "Laparoscopic Surgeries" ? "bg-white" : "bg-gray-500"
+                }`}
             ></div>
 
             <p
               onClick={() => setActive("Endoscopic & Bronchoscopic Services")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "Endoscopic & Bronchoscopic Services"
+              className={`cursor-pointer my-6 text-lg ${active === "Endoscopic & Bronchoscopic Services"
                   ? "text-white"
                   : "text-gray-500"
-              }`}
+                }`}
             >
               Endoscopic & Bronchoscopic Services
             </p>
             <div
-              className={`h-px ${
-                active === "Endoscopic & Bronchoscopic Services"
+              className={`h-px ${active === "Endoscopic & Bronchoscopic Services"
                   ? "bg-white"
                   : "bg-gray-500"
-              }`}
+                }`}
             ></div>
 
             <p
               onClick={() => setActive("Other Specialties")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "Other Specialties" ? "text-white" : "text-gray-500"
-              }`}
+              className={`cursor-pointer my-6 text-lg ${active === "Other Specialties" ? "text-white" : "text-gray-500"
+                }`}
             >
               Other Specialties
             </p>
             <div
-              className={`h-px ${
-                active === "Other Specialties" ? "bg-white" : "bg-gray-500"
-              }`}
+              className={`h-px ${active === "Other Specialties" ? "bg-white" : "bg-gray-500"
+                }`}
             ></div>
 
             <p
               onClick={() => setActive("General Surgical Procedures")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "General Surgical Procedures"
+              className={`cursor-pointer my-6 text-lg ${active === "General Surgical Procedures"
                   ? "text-white"
                   : "text-gray-500"
-              }`}
+                }`}
             >
               General Surgical Procedures
             </p>
             <div
-              className={`h-px ${
-                active === "General Surgical Procedures"
+              className={`h-px ${active === "General Surgical Procedures"
                   ? "bg-white"
                   : "bg-gray-500"
-              }`}
+                }`}
             ></div>
 
             <p
               onClick={() => setActive("Chronic & Lifestyle Diseases")}
-              className={`cursor-pointer my-6 text-lg ${
-                active === "Chronic & Lifestyle Diseases"
+              className={`cursor-pointer my-6 text-lg ${active === "Chronic & Lifestyle Diseases"
                   ? "text-white"
                   : "text-gray-500"
-              }`}
+                }`}
             >
               Chronic & Lifestyle Diseases
             </p>
             <div
-              className={`h-px ${
-                active === "Chronic & Lifestyle Diseases"
+              className={`h-px ${active === "Chronic & Lifestyle Diseases"
                   ? "bg-white"
                   : "bg-gray-500"
-              }`}
+                }`}
             ></div>
           </div>
 
           <div
-            className={`${
-              active === "Laser Treatments" ? "block" : "hidden"
-            } mx-20 w-[76%]`}
+            className={`${active === "Laser Treatments" ? "block" : "hidden"
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               Laser Treatments
@@ -251,9 +238,8 @@ export default function Services() {
           </div>
 
           <div
-            className={`${
-              active === "Laparoscopic Surgeries" ? "block" : "hidden"
-            } mx-20 w-[76%]`}
+            className={`${active === "Laparoscopic Surgeries" ? "block" : "hidden"
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               Laparoscopic Surgeries
@@ -331,11 +317,10 @@ export default function Services() {
           </div>
 
           <div
-            className={`${
-              active === "Endoscopic & Bronchoscopic Services"
+            className={`${active === "Endoscopic & Bronchoscopic Services"
                 ? "block"
                 : "hidden"
-            } mx-20 w-[76%]`}
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               Endoscopic & Bronchoscopic Services
@@ -358,9 +343,8 @@ export default function Services() {
           </div>
 
           <div
-            className={`${
-              active === "Other Specialties" ? "block" : "hidden"
-            } mx-20 w-[76%]`}
+            className={`${active === "Other Specialties" ? "block" : "hidden"
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               Other Specialties
@@ -464,9 +448,8 @@ export default function Services() {
           </div>
 
           <div
-            className={`${
-              active === "General Surgical Procedures" ? "block" : "hidden"
-            } mx-20 w-[76%]`}
+            className={`${active === "General Surgical Procedures" ? "block" : "hidden"
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               General Surgical Procedures
@@ -537,9 +520,8 @@ export default function Services() {
           </div>
 
           <div
-            className={`${
-              active === "Chronic & Lifestyle Diseases" ? "block" : "hidden"
-            } mx-20 w-[76%]`}
+            className={`${active === "Chronic & Lifestyle Diseases" ? "block" : "hidden"
+              } mx-20 w-[76%]`}
           >
             <p className="my-6 text-white text-xl font-bold">
               Chronic & Lifestyle Diseases
