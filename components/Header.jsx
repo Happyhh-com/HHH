@@ -16,14 +16,14 @@ const Header = () => {
       <section
         className="bg-cover bg-center w-[4vw] h-full flex items-center"
         style={{
-          backgroundImage: "url('/assets/logo.png')",
+          backgroundImage: "url('/assets/header/logo.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
         onClick={() => router.push("/")}
       ></section>
-      <div className="flex justify-start items-center gap-8 w-[50%]">
-        <nav className="flex justify-start items-center gap-8 ">
+      <div className="flex justify-start items-center gap-8 w-[55%]">
+        <nav className="flex justify-start items-center gap-15 ">
           {["About", "Services", "Blogs", "Contact Us"].map((item) => (
             <h1
               key={item}
@@ -36,18 +36,8 @@ const Header = () => {
             </h1>
           ))}
         </nav>
-        {/* <ButtonWithModal
-          className="bg-red-600 hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold"
-          buttonText="Book An Appointment"
-        >
-          <h2 className="text-lg font-semibold mb-2">Hello from the Modal!</h2>
-          <p className="text-gray-600">
-            This modal opens when you click the button. You can put any content
-            here.
-          </p>
-        </ButtonWithModal> */}
          <ButtonWithModal
-            className="bg-red-600 hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
+            className="bg-[#AD2525] hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
             buttonText="Book An Appointment"
           />
       </div>
