@@ -4,9 +4,10 @@ import ButtonWithModal from "@/components/Button";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [appointments, setAppointments] = useState({})
   const router = useRouter();
   const scrollRef = useRef(null);
 

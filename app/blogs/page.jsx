@@ -8,14 +8,14 @@ export default function Blogs() {
       "id": 1,
       "date": "September 1, 2023",
       "title": "Top 7 Foods to Prevent Urinary Tract Infections Naturally",
-      "description": "Discover simple dietary choices that can help protect you from recurring UTIs.",
+      "description": "Discover simple dietary choices that can help protect you from recurring UTIs.Discover simple dietary choices that can help protect you from recurring UTIs.Discover simple dietary choices that can help protect you from recurring UTIs.Discover simple dietary choices that can help protect you from recurring UTIs.Discover simple dietary choices that can help protect you from recurring UTIs.Discover simple dietary choices that can help protect you from recurring UTIs.",
       "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
     },
     {
       "id": 2,
       "date": "October 15, 2023",
       "title": "How to Boost Immunity During Monsoon",
-      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "description": "",
       "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
     },
     {
@@ -23,6 +23,61 @@ export default function Blogs() {
       "date": "September 1, 2023",
       "title": "Top 7 Foods to Prevent Urinary Tract Infections Naturally",
       "description": "Discover simple dietary choices that can help protect you from recurring UTIs.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },
+    {
+      "id": 4,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 5,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 6,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 7,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 8,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 9,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 10,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.earn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 11,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
+      "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
+    },{
+      "id": 12,
+      "date": "October 15, 2023",
+      "title": "How to Boost Immunity During Monsoon",
+      "description": "Learn easy lifestyle tips to keep infections at bay this season.",
       "imageUrl": "/assets/Temp blogs/temp_blog_pic.jpg"
     }
   ]
