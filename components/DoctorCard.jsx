@@ -1,10 +1,16 @@
 import React from "react";
 import { useRouter } from "next/navigation";
-
-import ButtonWithModal from "./Button";
+import AppointmentModal from "./AppointmentModal"
+import { useModal } from "./ModalProvider";
 
 const DoctorCard = () => {
   const router = useRouter();
+  const { openModal } = useModal();
+
+  const appointmentModal = () => {
+    openModal(<AppointmentModal />);
+  }
+
   return (
     <div className="flex flex-row items-center bg-[#E9F3FF] rounded-2xl p-4 w-[45vw] shadow-sm">
       <div className="flex-shrink-0">
@@ -31,18 +37,13 @@ const DoctorCard = () => {
             <p className="text-sm text-gray-500">Experience</p>
             <p className="text-base font-medium text-gray-800">6 Years</p>
           </div>
-          <ButtonWithModal
-            className="bg-red-600 hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
-            buttonText="Book An Appointment"
-          >
-            <h2 className="text-lg font-semibold mb-2">
-              Hello from the Modal!
-            </h2>
-            <p className="text-gray-600">
-              This modal opens when you click the button. You can put any
-              content here.
-            </p>
-          </ButtonWithModal>
+
+          <button
+            className="text-white bg-[#AD2525] rounded-3xl w-[12vw] h-[5vh] font-semibold cursor-pointer"
+            onClick={() => appointmentModal()}>
+            Book An Appointment
+          </button>
+
           <button
             onClick={() => router.push("/doctors/doctorsdescription")}
             className="w-[12vw] h-[5vh] border border-[#970000] text-black font-semibold rounded-full hover:bg-green-700 hover:text-white transition"

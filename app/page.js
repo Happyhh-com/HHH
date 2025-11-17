@@ -1,6 +1,5 @@
 "use client";
 
-import ButtonWithModal from "@/components/Button";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -10,6 +9,11 @@ export default function HomePage() {
   const [appointments, setAppointments] = useState({})
   const router = useRouter();
   const scrollRef = useRef(null);
+  const { openModal } = useModal();
+
+  const appointmentModal = () => {
+    openModal(<AppointmentModal />);
+  }
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -26,8 +30,8 @@ export default function HomePage() {
         }
 
         const data = await getResponse.json();
-        console.log("Appointments:", data);
-        setAppointments(data);
+        // console.log("Appointments:", data);
+        // setAppointments(data);
       } catch (error) {
         console.error(error);
       }
@@ -87,10 +91,11 @@ export default function HomePage() {
             leading to happier, healthier lives.
           </p>
 
-          <ButtonWithModal
-            className="bg-[#AD2525] hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8"
-            buttonText="Book An Appointment"
-          />
+          <button
+            className="bg-[#AD2525] hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8 text-white"
+            onClick={() => appointmentModal()}>
+            Book An Appointment
+          </button>
 
           <div className="flex items-center mt-8">
             <img

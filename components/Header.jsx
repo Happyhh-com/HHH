@@ -2,13 +2,29 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import ButtonWithModal from "./Button";
+import AppointmentModal from "./AppointmentModal"
+import { useModal } from "./ModalProvider";
+import { usePanel } from "./PanelProvider";
+import ServiceModal from "./ServiceModal";
 
 const Header = () => {
   const router = useRouter();
+  const { openModal } = useModal();
+  const { openPanel } = usePanel();
+
+  const appointmentModal = () => {
+    openModal(<AppointmentModal />);
+  }
 
   const handleNavClick = (path) => {
-    router.push(`/${path.toLowerCase()}`);
+
+
+    if (path == "services") {
+      openPanel(<ServiceModal onNavigate={() => router.push("/services")}/>)
+    } else {
+      router.push(`/${path.toLowerCase()}`);
+    }
+
   };
 
   return (
@@ -22,7 +38,7 @@ const Header = () => {
         }}
         onClick={() => router.push("/")}
       ></section>
-      <div className="flex justify-start items-center gap-8 w-[55%]">
+      <div className="flex justify-between items-center gap-8 w-[55%]">
         <nav className="flex justify-start items-center gap-15 ">
           {["About", "Services", "Blogs", "Contact Us"].map((item) => (
             <h1
@@ -36,10 +52,11 @@ const Header = () => {
             </h1>
           ))}
         </nav>
-         <ButtonWithModal
-            className="bg-[#AD2525] hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold"
-            buttonText="Book An Appointment"
-          />
+        <button
+          className="text-white bg-[#AD2525] rounded-3xl py-3 px-5 font-semibold cursor-pointer"
+          onClick={() => appointmentModal()}>
+          Book An Appointment
+        </button>
       </div>
     </header>
   );

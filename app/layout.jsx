@@ -1,6 +1,8 @@
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
+import { ModalProvider } from "../components/ModalProvider"
+import { PanelProvider } from "../components/PanelProvider"
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -18,9 +20,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer/>
+        <ModalProvider>
+          <PanelProvider>
+            <Header />
+            <main>
+              {children}
+            </main>
+          </PanelProvider>
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
