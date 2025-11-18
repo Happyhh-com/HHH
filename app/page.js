@@ -2,6 +2,8 @@
 
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useModal } from "../components/ModalProvider";
+import AppointmentModal from "../components/AppointmentModal"
 
 import { useRef, useEffect, useState } from "react";
 
