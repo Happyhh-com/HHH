@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, use } from "react";
 
-export default function Blog({ existingBlog }) {
+export default function Blog(props) {
+    const searchParams = use(props.searchParams);
+    const blogId = searchParams?.blogId;
+
+    const [formData, setFormData] = useState({});
+    const [loading, setLoading] = useState(true);
 
     const entityProperties = [
         "Id",
+        "Image",
         "Title",
         "P1",
         "P2",
@@ -136,33 +142,58 @@ export default function Blog({ existingBlog }) {
         "FP2"
     ];
 
-    const [formData, setFormData] = useState(
-        entityProperties.reduce((acc, key) => {
-            acc[key] = existingBlog?.[key] ?? "";
-            return acc;
-        }, {})
-    );
+    useEffect(() => {
+        async function fetchBlog() {
+            if (!blogId) {
+                const emptyData = entityProperties.reduce((acc, key) => {
+                    acc[key] = "";
+                    return acc;
+                }, {});
+                setFormData(emptyData);
+                setLoading(false);
+                return;
+            }
+
+            const res = await fetch(`/api/zzz/${blogId}`);
+            const data = await res.json();
+
+            const filled = entityProperties.reduce((acc, key) => {
+                acc[key] = data[key] ?? "";
+                return acc;
+            }, {});
+
+            setFormData(filled);
+            setLoading(false);
+        }
+
+        fetchBlog();
+    }, [blogId]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const url = "/api/entity";
 
         const fd = new FormData(e.target);
-        const submitted = Object.fromEntries(fd.entries());
 
-        const payload = {
-            ...formData,
-            ...submitted,
-        };
-
-        const res = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
+        Object.keys(formData).forEach(key => {
+            if (!fd.has(key)) {
+                fd.append(key, formData[key] ?? "");
+            }
         });
 
-        const data = await res.json();
+        await fetch("/api/zzz", {
+            method: "POST",
+            body: fd,
+        });
     };
+
+    if (loading)
+        return (
+            <div className="flex flex-col items-center justify-center py-16 text-gray-600">
+                <div className="animate-spin h-10 w-10 border-4 border-blue-600 border-t-transparent rounded-full mb-4"></div>
+                <p className="text-lg font-medium">Loading...</p>
+            </div>
+        );
+
 
     return (
         <>
@@ -173,12 +204,23 @@ export default function Blog({ existingBlog }) {
             </div>
 
             <p className="px-8 font-bold m-11 text-4xl text-[#203169]">
-                {existingBlog ? "Update Blog" : "Create Blog"}
+                {blogId ? "Update Blog" : "Create Blog"}
             </p>
 
             <div className="max-w-2xl mx-auto p-6">
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+
+                    <div className="flex flex-col">
+                        <label className="font-semibold block">Image</label>
+                        <input
+                            type="file"
+                            name="Image"
+                            accept="image/*"
+                            className="border border-gray-300 rounded-xl bg-white p-2"
+                        />
+                    </div>
+
                     {entityProperties
                         .filter((prop) => prop !== "Id")
                         .map((prop) => (

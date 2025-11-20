@@ -223,13 +223,12 @@ export default function Blogs() {
     "FP2": "Final paragraph 2"
   };
 
-    const handleEdit = (row) => {
-        
-        // router.push(`/admin/blog?existingBlog=${encodeURIComponent(JSON.stringify(test))}`);
+    const handleEdit = (id) => {
+        router.push(`/admin/blog?blogId=${id}`);
     };
 
     const handleCreate = () => {
-        // router.push("/admin/blog");
+        router.push("/admin/blog");
     };
 
     return (
@@ -242,7 +241,7 @@ export default function Blogs() {
 
             <div className="px-8 m-11 flex justify-between items-center">
                 <span className="font-bold text-4xl text-[#203169]">Admin Blogs</span>
-                <span className="text-blue-600 hover:underline">Create Blog</span>
+                <span className="text-blue-600 hover:underline cursor-pointer" onClick={() => handleCreate()}>Create Blog</span>
             </div>
 
 
@@ -270,8 +269,8 @@ export default function Blogs() {
                                     <td className="py-3 px-4 text-left w-[20%]">{s.description}</td>
                                     <td className="px-4 py-2">
                                         <button
-                                            onClick={() => handleEdit(s)}
-                                            className="text-blue-600 hover:underline"
+                                            onClick={() => handleEdit(s.id)}
+                                            className="text-blue-600 hover:underline cursor-pointer"
                                         >
                                             Edit
                                         </button>

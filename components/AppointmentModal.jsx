@@ -9,6 +9,30 @@ export default function AppointmentModal() {
     const { closeModal } = useModal();
     const [loading, setLoading] = useState(false);
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const data = {
+            name: formData.get("name"),
+            phone: formData.get("phone"),
+            email: formData.get("email"),
+            message: formData.get("message")
+        };
+
+        const res = await fetch("/api/zzz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        closeModal();
+    };
+
     return (
         <>
             <button className="bg-[#AD2525] hover:bg-green-700 w-[12vw] h-[5vh] rounded-full text-sm font-bold">
@@ -28,8 +52,7 @@ export default function AppointmentModal() {
                         Book an Appointment
                     </h2>
 
-                    <form
-                        // onSubmit={handleSubmit} 
+                    <form onSubmit={handleSubmit}
                         className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -38,8 +61,6 @@ export default function AppointmentModal() {
                             <input
                                 type="text"
                                 name="name"
-                                // value={formData.name}
-                                // onChange={handleChange}
                                 placeholder="Enter your name"
                                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
                                 required
@@ -53,8 +74,6 @@ export default function AppointmentModal() {
                             <input
                                 type="tel"
                                 name="phone"
-                                // value={formData.phone}
-                                // onChange={handleChange}
                                 placeholder="Enter your phone number"
                                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
                                 required
@@ -68,8 +87,6 @@ export default function AppointmentModal() {
                             <input
                                 type="email"
                                 name="email"
-                                // value={formData.email}
-                                // onChange={handleChange}
                                 placeholder="Enter your email"
                                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
                                 required
@@ -82,8 +99,6 @@ export default function AppointmentModal() {
                             </label>
                             <textarea
                                 name="message"
-                                // value={formData.message}
-                                // onChange={handleChange}
                                 placeholder="Write your message..."
                                 rows={4}
                                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
