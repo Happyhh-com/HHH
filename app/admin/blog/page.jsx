@@ -11,7 +11,7 @@ export default function Blog(props) {
 
     const entityProperties = [
         "Id",
-        "Image",
+        // "Image",
         "Title",
         "P1",
         "P2",
@@ -215,7 +215,7 @@ export default function Blog(props) {
                         <label className="font-semibold block">Image</label>
                         <input
                             type="file"
-                            name="Image"
+                            // name="Image"
                             accept="image/*"
                             className="border border-gray-300 rounded-xl bg-white p-2"
                         />
