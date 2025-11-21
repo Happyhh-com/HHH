@@ -82,6 +82,9 @@ export default function Blogs() {
     }
   ]
 
+  const handleReadMore = (id) => {
+        router.push(`/blog?blogId=${id}`);
+    };
 
   return (
     <>
@@ -120,7 +123,7 @@ export default function Blogs() {
               <p className="text-[#14141491] mb-2">{blog.date}</p>
               <p className="text-[#2B7B37] mb-2 font-bold">{blog.title}</p>
               <p className="mb-2">{blog.description}</p>
-              <p className="text-[#AD2525] font-bold underline cursor-pointer">Read More</p>
+              <p className="text-[#AD2525] font-bold underline cursor-pointer" onClick={() => handleReadMore(blog.id)}>Read More</p>
             </div>
           </div>
         ))}
