@@ -1,395 +1,134 @@
-{
-  "blog_title": "Second Blog Title",
-  "title_paragraphs": [
-    {
-      "content": "This is title paragraph 1."
-    },
-    {
-      "content": "This is title paragraph 2."
-    }
-  ],
-  "headings": [
-    {
-      "heading_order": 1,
-      "heading_title": "Heading 1",
-      "paragraphs": [
-        {
-          "content": "H1 Paragraph 1"
-        },
-        {
-          "content": "H1 Paragraph 2"
-        },
-        {
-          "content": "H1 Paragraph 3"
-        },
-        {
-          "content": "H1 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 2,
-      "heading_title": "Heading 2",
-      "paragraphs": [
-        {
-          "content": "H2 Paragraph 1"
-        },
-        {
-          "content": "H2 Paragraph 2"
-        },
-        {
-          "content": "H2 Paragraph 3"
-        },
-        {
-          "content": "H2 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 3,
-      "heading_title": "Heading 3",
-      "paragraphs": [
-        {
-          "content": "H3 Paragraph 1"
-        },
-        {
-          "content": "H3 Paragraph 2"
-        },
-        {
-          "content": "H3 Paragraph 3"
-        },
-        {
-          "content": "H3 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 5,
-      "heading_title": "Heading 14",
-      "paragraphs": [
-        {
-          "content": "H14 Paragraph 1"
-        },
-        {
-          "content": "H14 Paragraph 2"
-        }
-      ],
-      "bullets": [
-        {
-          "content": "H14 Bullet 1"
-        },
-        {
-          "content": "H14 Bullet 2"
-        },
-        {
-          "content": "H14 Bullet 3"
-        },
-        {
-          "content": "H14 Bullet 4"
-        },
-        {
-          "content": "H14 Bullet 5"
-        },
-        {
-          "content": "H14 Bullet 6"
-        },
-        {
-          "content": "H14 Bullet 7"
-        },
-        {
-          "content": "H14 Bullet 8"
-        },
-        {
-          "content": "H14 Bullet 9"
-        },
-        {
-          "content": "H14 Bullet 10"
-        }
-      ]
-    },
-    {
-      "heading_order": 5,
-      "heading_title": "Heading 5",
-      "paragraphs": [
-        {
-          "content": "H5 Paragraph 1"
-        },
-        {
-          "content": "H5 Paragraph 2"
-        },
-        {
-          "content": "H5 Paragraph 3"
-        },
-        {
-          "content": "H5 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 6,
-      "heading_title": "Heading 6",
-      "paragraphs": [
-        {
-          "content": "H6 Paragraph 1"
-        },
-        {
-          "content": "H6 Paragraph 2"
-        },
-        {
-          "content": "H6 Paragraph 3"
-        },
-        {
-          "content": "H6 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 7,
-      "heading_title": "Heading 7",
-      "paragraphs": [
-        {
-          "content": "H7 Paragraph 1"
-        },
-        {
-          "content": "H7 Paragraph 2"
-        },
-        {
-          "content": "H7 Paragraph 3"
-        },
-        {
-          "content": "H7 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 8,
-      "heading_title": "Heading 8",
-      "paragraphs": [
-        {
-          "content": "H8 Paragraph 1"
-        },
-        {
-          "content": "H8 Paragraph 2"
-        },
-        {
-          "content": "H8 Paragraph 3"
-        },
-        {
-          "content": "H8 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 9,
-      "heading_title": "Heading 9",
-      "paragraphs": [
-        {
-          "content": "H9 Paragraph 1"
-        },
-        {
-          "content": "H9 Paragraph 2"
-        },
-        {
-          "content": "H9 Paragraph 3"
-        },
-        {
-          "content": "H9 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 10,
-      "heading_title": "Heading 10",
-      "paragraphs": [
-        {
-          "content": "H10 Paragraph 1"
-        },
-        {
-          "content": "H10 Paragraph 2"
-        },
-        {
-          "content": "H10 Paragraph 3"
-        },
-        {
-          "content": "H10 Paragraph 4"
-        }
-      ]
-    },
-    {
-      "heading_order": 11,
-      "heading_title": "Heading 11",
-      "paragraphs": [
-        {
-          "content": "H11 Paragraph 1"
-        },
-        {
-          "content": "H11 Paragraph 2"
-        }
-      ],
-      "bullets": [
-        {
-          "content": "H11 Bullet 1"
-        },
-        {
-          "content": "H11 Bullet 2"
-        },
-        {
-          "content": "H11 Bullet 3"
-        },
-        {
-          "content": "H11 Bullet 4"
-        },
-        {
-          "content": "H11 Bullet 5"
-        },
-        {
-          "content": "H11 Bullet 6"
-        },
-        {
-          "content": "H11 Bullet 7"
-        },
-        {
-          "content": "H11 Bullet 8"
-        },
-        {
-          "content": "H11 Bullet 9"
-        },
-        {
-          "content": "H11 Bullet 10"
-        }
-      ]
-    },
-    {
-      "heading_order": 12,
-      "heading_title": "Heading 12",
-      "paragraphs": [
-        {
-          "content": "H12 Paragraph 1"
-        },
-        {
-          "content": "H12 Paragraph 2"
-        }
-      ],
-      "bullets": [
-        {
-          "content": "H12 Bullet 1"
-        },
-        {
-          "content": "H12 Bullet 2"
-        },
-        {
-          "content": "H12 Bullet 3"
-        },
-        {
-          "content": "H12 Bullet 4"
-        },
-        {
-          "content": "H12 Bullet 5"
-        },
-        {
-          "content": "H12 Bullet 6"
-        },
-        {
-          "content": "H12 Bullet 7"
-        },
-        {
-          "content": "H12 Bullet 8"
-        },
-        {
-          "content": "H12 Bullet 9"
-        },
-        {
-          "content": "H12 Bullet 10"
-        }
-      ]
-    },
-    {
-      "heading_order": 13,
-      "heading_title": "Heading 13",
-      "paragraphs": [
-        {
-          "content": "H13 Paragraph 1"
-        },
-        {
-          "content": "H13 Paragraph 2"
-        }
-      ],
-      "bullets": [
-        {
-          "content": "H13 Bullet 1"
-        },
-        {
-          "content": "H13 Bullet 2"
-        },
-        {
-          "content": "H13 Bullet 3"
-        },
-        {
-          "content": "H13 Bullet 4"
-        },
-        {
-          "content": "H13 Bullet 5"
-        },
-        {
-          "content": "H13 Bullet 6"
-        },
-        {
-          "content": "H13 Bullet 7"
-        },
-        {
-          "content": "H13 Bullet 8"
-        },
-        {
-          "content": "H13 Bullet 9"
-        },
-        {
-          "content": "H13 Bullet 10"
-        }
-      ]
-    },
-    {
-      "heading_order": 14,
-      "heading_title": "Heading 14",
-      "paragraphs": [
-        {
-          "content": "H14 Paragraph 1"
-        },
-        {
-          "content": "H14 Paragraph 2"
-        }
-      ],
-      "bullets": [
-        {
-          "content": "H14 Bullet 1"
-        },
-        {
-          "content": "H14 Bullet 2"
-        },
-        {
-          "content": "H14 Bullet 3"
-        },
-        {
-          "content": "H14 Bullet 4"
-        },
-        {
-          "content": "H14 Bullet 5"
-        },
-        {
-          "content": "H14 Bullet 6"
-        },
-        {
-          "content": "H14 Bullet 7"
-        },
-        {
-          "content": "H14 Bullet 8"
-        },
-        {
-          "content": "H14 Bullet 9"
-        },
-        {
-          "content": "H14 Bullet 10"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "Id": 6,
+    "Title": "How to Pass a Kidney Stone & 5 Proven Tips to Prevent Them",
+    "P1": "If you’ve ever experienced a kidney stone, you already know how intense the pain can be. \nMost people describe it as one of the worst pains imaginable — and many will face it more \nthan once. Kidney stones affect men more than women, and without preventive care, nearly \n50% of people may develop another stone within 10–15 years.",
+    "P2": "",
+    "H1": "",
+    "H1P1": "",
+    "H1P2": "",
+    "H1P3": "",
+    "H1P4": "",
+    "H2": "",
+    "H2P1": "",
+    "H2P2": "",
+    "H2P3": "",
+    "H2P4": "",
+    "H3": "",
+    "H3P1": "",
+    "H3P2": "",
+    "H3P3": "",
+    "H3P4": "",
+    "H4": "What Causes Kidney Stones?",
+    "H4P1": "Kidney stones form when minerals in the urine — such as calcium, oxalate, or uric acid — \nbecome too concentrated and crystallize. Over time, these crystals grow into stones.",
+    "H4B1": "Types of Stones: ",
+    "H4B2": "- Calcium Stones (most common)",
+    "H4B3": "- Uric Acid Stones",
+    "H4B4": "- Struvite Stones",
+    "H4B5": "- Cystine Stones",
+    "H4B6": "Symptoms of a Kidney Stone:",
+    "H4B7": "- Sharp back or side pain",
+    "H4B8": "- Pain radiating to lower abdomen or groin",
+    "H4B9": "- Blood in urine ",
+    "H4B10": "- Blood in urine ",
+    "H4P2": "- Frequent urination ",
+    "H5": "Diagnosis:",
+    "H5P1": "- Urinalysis ",
+    "H5P2": "- Renal Ultrasound \n",
+    "H5P3": "- CT Scan",
+    "H5P4": "",
+    "H6": "How to Pass a Kidney Stone Naturally:",
+    "H6P1": "1. Hydrate well (2–3L/day) ",
+    "H6P2": "2. Use over‑the‑counter pain relief",
+    "H6P3": "3. Alpha‑blocker medicines may help passage",
+    "H6P4": "4. Procedures may be required for larger stones (Ureteroscopy, ESWL, PCNL)",
+    "H7": "",
+    "H7P1": "",
+    "H7P2": "",
+    "H7P3": "",
+    "H7P4": "",
+    "H8": "5 Tips to Prevent Kidney Stones: ",
+    "H8P1": "1. Drink enough water — aim for 2–2.5L urine daily",
+    "H8B1": "2. Eat calcium‑rich foods (yogurt, soy, beans)",
+    "H8B2": "3. Lemon water — citrate helps prevent stones",
+    "H8B3": "4. Reduce salt (limit to <2300mg/day)",
+    "H8B4": "5. Cut down animal protein — moderate intake reduces risk",
+    "H8B5": "",
+    "H8B6": "",
+    "H8B7": "",
+    "H8B8": "",
+    "H8B9": "",
+    "H8B10": "",
+    "H8P2": "",
+    "H9": "",
+    "H9P1": "",
+    "H9P2": "",
+    "H9P3": "",
+    "H9P4": "",
+    "H10": "",
+    "H10P1": "",
+    "H10P2": "",
+    "H10P3": "",
+    "H10P4": "",
+    "H11": "",
+    "H11P1": "",
+    "H11P2": "",
+    "H11P3": "",
+    "H11P4": "",
+    "H12": "When to See a Doctor:",
+    "H12P1": "",
+    "H12B1": "- Severe pain",
+    "H12B2": "- Fever",
+    "H12B3": "- Vomiting ",
+    "H12B4": "- Difficulty urinating",
+    "H12B5": "- Blood in urine ",
+    "H12B6": "",
+    "H12B7": "",
+    "H12B8": "",
+    "H12B9": "",
+    "H12B10": "",
+    "H12P2": "",
+    "H13": "",
+    "H13P1": "",
+    "H13P2": "",
+    "H13P3": "",
+    "H13P4": "",
+    "H14": "",
+    "H14P1": "",
+    "H14P2": "",
+    "H14P3": "",
+    "H14P4": "",
+    "H15": "",
+    "H15P1": "",
+    "H15P2": "",
+    "H15P3": "",
+    "H15P4": "",
+    "H16": "Expert Kidney Care at Happy Healthy Hospital: ",
+    "H16P1": "Our Urology & Nephrology specialists offer: ",
+    "H16B1": "- Advanced imaging",
+    "H16B2": "- Laser stone treatments \n",
+    "H16B3": "- Minimally invasive surgeries",
+    "H16B4": "- Preventive care plans",
+    "H16B5": "",
+    "H16B6": "",
+    "H16B7": "",
+    "H16B8": "",
+    "H16B9": "",
+    "H16B10": "",
+    "H16P2": "Your kidneys work silently every day — protecting them starts with simple habits and \ntimely care. If you’re experiencing symptoms or want to prevent future stones, our \nspecialists are here to guide you.",
+    "Final_Overview": "",
+    "FP1": "",
+    "FB1": "",
+    "FB2": "",
+    "FB3": "",
+    "FB4": "",
+    "FB5": "",
+    "FB6": "",
+    "FB7": "",
+    "FB8": "",
+    "FB9": "",
+    "FB10": "",
+    "FP2": "",
+    "CreatedDate": "2025-12-02T20:21:29.56"
+  }
+]

@@ -1,8 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Blogs() {
     const router = useRouter();
+    const[blogsList, setBlogsList] = useState([]);
 
     const dateFormatOptions = {
         day: "2-digit",
@@ -223,6 +225,23 @@ export default function Blogs() {
     "FP2": "Final paragraph 2"
   };
 
+  useEffect(() => {
+      const fetchBlogs = async () => {
+        try {
+          const getResponse = await fetch("https://localhost:727/Blog/get_AllBlogs");
+          if (!getResponse.ok) {
+            throw new Error("Failed to fetch appointments");
+          }
+  
+          const data = await getResponse.json();
+          setBlogsList(data);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchBlogs();
+    }, []);
     const handleEdit = (id) => {
         router.push(`/admin/blog?blogId=${id}`);
     };
@@ -259,17 +278,17 @@ export default function Blogs() {
                         </tr>
                     </thead>
                     <tbody>
-                        {blogs.map((s, index) => {
+                        {blogsList.map((s, index) => {
                             const formattedDate = new Date(s.date).toLocaleString("en-IN", dateFormatOptions);
                             return (
                                 <tr key={s.id} className="border-b hover:bg-green-50 transition-colors">
                                     <td className="py-3 px-4 text-left w-[20%]">{index + 1}</td>
-                                    <td className="py-3 px-4 text-left w-[20%]">{formattedDate}</td>
-                                    <td className="py-3 px-4 text-left w-[20%]">{s.title}</td>
-                                    <td className="py-3 px-4 text-left w-[20%]">{s.description}</td>
+                                    <td className="py-3 px-4 text-left w-[20%]">{s.CreatedDate}</td>
+                                    <td className="py-3 px-4 text-left w-[20%]">{s.Title}</td>
+                                    <td className="py-3 px-4 text-left w-[20%]">{s.P1}</td>
                                     <td className="px-4 py-2">
                                         <button
-                                            onClick={() => handleEdit(s.id)}
+                                            onClick={() => handleEdit(s.Id)}
                                             className="text-blue-600 hover:underline cursor-pointer"
                                         >
                                             Edit
