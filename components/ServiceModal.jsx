@@ -1,9 +1,13 @@
 "use client";
 import { usePanel } from "@/components/PanelProvider";
+import { useRouter } from "next/navigation";
+
 
 export default function ServiceModal({ onNavigate }) {
 
     const { closePanel } = usePanel();
+    const router = useRouter();
+
 
     const handelServices = () => {
         closePanel();
@@ -17,122 +21,107 @@ export default function ServiceModal({ onNavigate }) {
             <div className="flex mt-15 gap-5 mx-10">
 
                 <div className="flex-1">
-                    <p className="text-[#2B7B37] font-xl">Laser Treatments</p>
+                    <p className="text-[#2B7B37] font-xl">Chronic & lifestyle Disease</p>
                     <ul className="ml-3">
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/chronickidneydisease") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Kidney Stones
+                            Chronic Kidney Disease (CKD) Management
                         </li>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/kidneystone") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Prostate
+                            Kidney Stone Management
                         </li>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/prostatecare") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Bladder Tumors
+                            Prostate Care
                         </li>
+                    </ul>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                    <p className="text-[#2B7B37] font-xl mt-10">Endoscopic</p>
+                    <ul className="ml-3">
+                        <li onClick={() => { closePanel(); router.push("/services/diagnosticssupportservices") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Piles
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Circumcision
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Cosmetic & Plastic Surgeries
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Varicose Veins
+                            Diagnostics & Support Services
                         </li>
                     </ul>
                 </div>
 
                 <div className="flex-1">
-                    <p className="text-[#2B7B37] font-xl">Laparoscopic Surgeries</p>
+
+                    <p className="text-[#2B7B37] font-xl">Laproscopic Surgeries</p>
                     <ul className="ml-3">
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/nephrology") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Prostatectomy
+                            Nephrology (Kidney Care)
+                        </li>
+                    </ul>
+
+                    <p className="text-[#2B7B37] font-xl mt-10">Laser treatments</p>
+                    <ul className="ml-3">
+                        <li onClick={() => { closePanel(); router.push("/services/bladderhealth") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Bladder Health
                         </li>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/plasticcosmeticsurgery") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Nephrectomy
+                            Plastic & Cosmetic Surgery
                         </li>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/kidneystone") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Appendix Removal
+                            Kidney Stone Management
                         </li>
 
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/prostatecare") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Hernia Repair
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Gallbladder Stones
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Varicocelectomy
+                            Prostate Care
                         </li>
                     </ul>
                 </div>
 
                 <div className="flex-1">
-                    <p className="text-[#2B7B37] font-xl">Endoscopic & Bronchoscopic Services</p>
+                    <p className="text-[#2B7B37] font-xl">Other Specialities</p>
                     <ul className="ml-3">
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
+                        <li onClick={() => { closePanel(); router.push("/services/cardiology") }} className="flex items-center border-b border-black my-4 cursor-pointer">
                             <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Advanced internal diagnostics
+                            Cardiology (Heart Care)
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/nutritiondietetics") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Nutrition & Dietetics
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/ent") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            ENT (Ear, Nose & Throat)
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/generalmedicine") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            General Medicine
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/nephrology") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Nephrology (Kidney Care)
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/neurology") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Neurology
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/orthopedics") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Orthopedics (Bone & Joint Care)
+                        </li>
+                        <li onClick={() => { closePanel(); router.push("/services/plasticcosmeticsurgery") }} className="flex items-center border-b border-black my-4 cursor-pointer">
+                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
+                            Plastic & Cosmetic Surgery
                         </li>
                     </ul>
-
-                    <p className="text-[#2B7B37] font-xl">General Surgical Procedures</p>
-                    <ul className="ml-3">
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Gallstones
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Hernia Repair
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Haemorrhoids (Piles)
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Appendicitis
-                        </li>
-
-                        <li className="flex items-center border-b border-black my-4 cursor-pointer">
-                            <span className="mr-2 block h-2 aspect-square rounded-full bg-[#0061A7]"></span>
-                            Stomach & Intestinal Cancer
-                        </li>
-                    </ul>
-
                 </div>
-
             </div>
 
-            <p className="text-[#2B7B37] mx-10 my-10 underline cursor-pointer" onClick={() => handelServices()}>View All Specialities</p>
+            <p className="text-[#2B7B37] mx-10 mb-10 underline cursor-pointer" onClick={() => handelServices()}>View All Specialities</p>
 
         </>
     );
