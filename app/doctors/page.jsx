@@ -24,6 +24,7 @@ export default function Doctors() {
       <p className="px-8 font-bold m-11 text-4xl text-blue-900">Our Doctors</p>
       <div className="flex justify-around items-center mb-[5vh]">
         <div className="gap-8 flex flex-col">
+          <DoctorCard name="Giridhar" />
           <DoctorCard />
           <DoctorCard />
           <DoctorCard />
@@ -31,6 +32,7 @@ export default function Doctors() {
           <DoctorCard />
         </div>
         <div className="gap-8 flex flex-col">
+          <DoctorCard />
           <DoctorCard />
           <DoctorCard />
           <DoctorCard />

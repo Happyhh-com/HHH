@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import AppointmentModal from "./AppointmentModal"
 import { useModal } from "./ModalProvider";
 
-const DoctorCard = () => {
+const DoctorCard = (doctorName) => {
   const router = useRouter();
   const { openModal } = useModal();
 
@@ -11,6 +11,11 @@ const DoctorCard = () => {
     openModal(<AppointmentModal />);
   }
 
+  const doctorsList ={
+    
+  }
+  console.log("doctorName", doctorName);
+  
   return (
     <div className="flex flex-row items-center bg-[#E9F3FF] rounded-2xl p-4 w-[45vw] shadow-sm">
       <div className="flex-shrink-0">
@@ -45,7 +50,7 @@ const DoctorCard = () => {
           </button>
 
           <button
-            onClick={() => router.push("/doctors/doctorsdescription")}
+            onClick={() => router.push(`/doctors/doctorsdescription/${doctorName.name}`)}
             className="w-[12vw] h-[5vh] border border-[#970000] text-black font-semibold rounded-full hover:bg-green-700 hover:text-white transition"
           >
             View Details

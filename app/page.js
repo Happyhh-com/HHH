@@ -3,43 +3,42 @@
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useModal } from "../components/ModalProvider";
-import AppointmentModal from "../components/AppointmentModal"
+import AppointmentModal from "../components/AppointmentModal";
 
 import { useRef, useEffect, useState } from "react";
 
 export default function HomePage() {
-  const [appointments, setAppointments] = useState({})
   const router = useRouter();
   const scrollRef = useRef(null);
   const { openModal } = useModal();
 
+  const heroImages = [
+    "/assets/home/homepage.png",
+    "/assets/home/homepage02.png",
+    "/assets/home/homepage03.png",
+    "/assets/home/homepage04.png",
+  ];
+
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroIndex((prev) =>
+        prev === heroImages.length - 1 ? 0 : prev + 1
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const appointmentModal = () => {
     openModal(<AppointmentModal />);
-  }
+  };
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft = 0;
     }
-  }, []);
-
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      try {
-        const getResponse = await fetch(" /data.json");
-        if (!getResponse.ok) {
-          throw new Error("Failed to fetch appointments");
-        }
-
-        const data = await getResponse.json();
-        // console.log("Appointments:", data);
-        // setAppointments(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchAppointments();
   }, []);
 
   const scrollLeft = () => {
@@ -64,21 +63,34 @@ export default function HomePage() {
 
   return (
     <main className=" bg-white">
-      <section
-        className="relative h-[85vh] bg-cover bg-center flex items-center justify-start"
-        style={{
-          backgroundImage: "url('/assets/home/homepage.png')",
-        }}
-      >
+      <section className="relative h-[85vh] overflow-hidden">
+        {/* SLIDER */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
+          style={{
+            transform: `translateX(-${currentHeroIndex * 100}%)`,
+          }}
+        >
+          {heroImages.map((img, index) => (
+            <div
+              key={index}
+              className="min-w-full h-[85vh] bg-cover bg-center"
+              style={{ backgroundImage: `url('${img}')` }}
+            />
+          ))}
+        </div>
+
+        {/* GRADIENT OVERLAY */}
+        <div
+          className="absolute inset-0 z-10"
           style={{
             background:
               "linear-gradient(271.86deg, rgba(0,0,0,0) 17.64%, #000000 95.6%)",
           }}
-        ></div>
+        />
 
-        <div className="relative ml-[4vw] w-[60vw] h-[85vh] flex flex-col mt-[20vh]">
+        {/* CONTENT */}
+        <div className="relative z-20 ml-[4vw] w-[60vw] h-[85vh] flex flex-col mt-[20vh]">
           <h1 className="font-extrabold leading-[1.29] tracking-[-0.04em] text-white text-4xl">
             Bringing smiles to families
             <br />
@@ -95,23 +107,15 @@ export default function HomePage() {
 
           <button
             className="bg-[#AD2525] hover:bg-green-700 w-[14vw] h-[6vh] rounded-full text-sm font-bold mt-8 text-white"
-            onClick={() => appointmentModal()}>
+            onClick={appointmentModal}
+          >
             Book An Appointment
           </button>
 
           <div className="flex items-center mt-8">
-            <img
-              src="/assets/home/Google.png"
-              alt="Google"
-              className="h-[3vh] w-auto object-contain"
-            />
-
+            <img src="/assets/home/Google.png" className="h-[3vh]" />
             <div className="flex items-center ml-3">
-              <img
-                src="/assets/home/stars.png"
-                alt="Stars"
-                className="h-[4vh] w-auto object-contain"
-              />
+              <img src="/assets/home/stars.png" className="h-[4vh]" />
               <h1 className="ml-2 text-2xl font-bold text-[#FFD400]">4.5</h1>
               <h3 className="ml-2 font-semibold text-white">Google Reviews</h3>
             </div>
@@ -119,13 +123,28 @@ export default function HomePage() {
 
           <div
             onClick={() => router.push("/doctors")}
-            className="flex justify-around items-center w-[14vw] h-[6vh] mt-[5vh] bg-white px-5 py-3 rounded-full  shadow-md text-[#1E3A8A] font-semibold text-sm cursor-pointer"
+            className="flex justify-around items-center w-[14vw] h-[6vh] mt-[5vh] bg-white px-5 py-3 rounded-full shadow-md text-[#1E3A8A] font-semibold text-sm cursor-pointer"
           >
             Find a Doctor
-            <button className="ml-3 bg-[#B91C1C] text-white p-2 rounded-full hover:bg-[#991B1B] transition">
+            <button className="ml-3 bg-[#B91C1C] text-white p-2 rounded-full">
               <ArrowRight size={14} />
             </button>
           </div>
+        </div>
+
+        {/* DOTS */}
+        <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 flex gap-3">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentHeroIndex(index)}
+              className={`h-3 w-3 rounded-full transition-all ${
+                currentHeroIndex === index
+                  ? "bg-white scale-125"
+                  : "bg-white/50"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
