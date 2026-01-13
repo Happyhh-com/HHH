@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import AppointmentModal from "../../../../components/AppointmentModal";
 import { useModal } from "../../../../components/ModalProvider";
 
-export default function GiridharDescription() {
+export default function HemaRajuDescription() {
   const router = useRouter();
   const { openModal } = useModal();
 
@@ -28,7 +28,7 @@ export default function GiridharDescription() {
           Doctors
         </span>
         <span>/</span>
-        <span className="text-green-600">Dr. M. Giridhar </span>
+        <span className="text-green-600"> Dr. Hemaraju N</span>
       </div>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-10">
@@ -42,14 +42,13 @@ export default function GiridharDescription() {
 
         <div className="flex flex-col space-y-3 text-center md:text-left">
           <h1 className="text-2xl md:text-3xl font-bold text-blue-900">
-            Dr. M. Giridhar
+            Dr. Hemaraju N
           </h1>
           <p className="text-gray-700 font-medium text-sm md:text-base">
-            M.S. (PGIMER)
+            MBBS, DLO, DipNB (ENT), MNAMS
           </p>
-         
           <p className="text-blue-600 font-semibold text-sm md:text-base">
-           Senior Consultant – General & Laparoscopic Surgery  30+ Years
+            28+ Years
           </p>
           <button
             className="bg-red-600 hover:bg-red-700 transition text-white px-5 
@@ -62,23 +61,15 @@ export default function GiridharDescription() {
         </div>
       </div>
 
-      <Section title="Overview">
-        <p>
-          Experienced surgeon with expertise in general, laparoscopic, breast,
-          thyroid, and gastrointestinal procedures.
-        </p>
-      </Section>
-
       <Section title="Area of Expertise">
         <ul className="list-disc ml-6 text-gray-700 space-y-1">
-          <li>General Surgery</li>
-          <li>Laparoscopic Surgery</li>
-          <li>Breast & Thyroid Surgeries</li>
-          <li>Gastrointestinal Surgeries</li>
+          <li>Endoscopic Sinus Surgery </li>
+          <li>Micro-laryngeal Surgery</li>
+          <li>Micro-ear Surgery</li>
         </ul>
       </Section>
 
-      <Section title="Experience">
+      <Section title=" Experience">
         {/* <Card>
           <div className="flex-shrink-0 hidden sm:block">
             <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
@@ -103,7 +94,7 @@ export default function GiridharDescription() {
               Experience
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug mt-1">
-              30+ Years 
+              28+ Years
             </p>
           </div>
         </Card>
@@ -116,9 +107,10 @@ export default function GiridharDescription() {
               Education
             </h2>
             <ul className="list-disc ml-5 text-gray-800 space-y-1 text-sm md:text-base">
-              <li>
-               M.S. (PGIMER)
-              </li>
+              <li>MBBS</li>
+              <li>DLO</li>
+              <li>DipNB (ENT)</li>
+              <li>MNAMS</li>
             </ul>
           </div>
         </Card>

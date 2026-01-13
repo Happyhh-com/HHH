@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import AppointmentModal from "../../../../components/AppointmentModal";
 import { useModal } from "../../../../components/ModalProvider";
 
-export default function GiridharDescription() {
+export default function GladsonDescription() {
   const router = useRouter();
   const { openModal } = useModal();
 
@@ -28,7 +28,7 @@ export default function GiridharDescription() {
           Doctors
         </span>
         <span>/</span>
-        <span className="text-green-600">Dr. M. Giridhar </span>
+        <span className="text-green-600">Dr. Gladson Guddappa Uchil </span>
       </div>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-10">
@@ -42,14 +42,9 @@ export default function GiridharDescription() {
 
         <div className="flex flex-col space-y-3 text-center md:text-left">
           <h1 className="text-2xl md:text-3xl font-bold text-blue-900">
-            Dr. M. Giridhar
-          </h1>
-          <p className="text-gray-700 font-medium text-sm md:text-base">
-            M.S. (PGIMER)
-          </p>
-         
-          <p className="text-blue-600 font-semibold text-sm md:text-base">
-           Senior Consultant – General & Laparoscopic Surgery  30+ Years
+            Dr. Gladson Guddappa Uchil
+          </h1> <p className="text-blue-600 font-semibold text-sm md:text-base">
+            Otorhinolaryngology • 28+ Years Experience
           </p>
           <button
             className="bg-red-600 hover:bg-red-700 transition text-white px-5 
@@ -64,22 +59,27 @@ export default function GiridharDescription() {
 
       <Section title="Overview">
         <p>
-          Experienced surgeon with expertise in general, laparoscopic, breast,
-          thyroid, and gastrointestinal procedures.
+          Dr. Gladson Guddappa Uchil is an experienced ENT, Head & Neck Surgeon
+          with more than 28 years in the field. He specialises in diagnosing and
+          treating disorders related to the ear, nose, throat, head, and neck,
+          along with expertise in allergy care and sleep-related breathing
+          issues. Dr. Gladson is known for his patient-centred approach,
+          accurate diagnoses, and advanced surgical and non-surgical treatments
+          across a wide range of ENT conditions.
         </p>
       </Section>
 
       <Section title="Area of Expertise">
         <ul className="list-disc ml-6 text-gray-700 space-y-1">
-          <li>General Surgery</li>
-          <li>Laparoscopic Surgery</li>
-          <li>Breast & Thyroid Surgeries</li>
-          <li>Gastrointestinal Surgeries</li>
+          <li>ENT / Otorhinolaryngology</li>
+          <li>Head & Neck Surgery</li>
+          <li>Allergist / Immunologist </li>
+          <li>Sleep Disorders Specialist</li>
         </ul>
       </Section>
 
-      <Section title="Experience">
-        {/* <Card>
+      <Section title="Speciality & Experience">
+        <Card>
           <div className="flex-shrink-0 hidden sm:block">
             <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
               <img
@@ -92,10 +92,19 @@ export default function GiridharDescription() {
           <div className="ml-0 sm:ml-6 w-full">
             <h2 className="text-xs text-gray-700">Speciality</h2>
             <p className="text-sm font-semibold text-gray-900 leading-snug mt-1">
-              Urology, Nephrology, Urinary Tract Infections (UTI)
+              ENT / Otorhinolaryngology
+            </p>
+            <p className="text-sm font-semibold text-gray-900 leading-snug mt-1">
+              Head & Neck Surgery
+            </p>
+            <p className="text-sm font-semibold text-gray-900 leading-snug mt-1">
+              Allergist / Immunologist
+            </p>
+            <p className="text-sm font-semibold text-gray-900 leading-snug mt-1">
+              Sleep Disorders Specialist
             </p>
           </div>
-        </Card> */}
+        </Card>
 
         <Card>
           <div className="ml-0 sm:ml-6 w-full">
@@ -103,13 +112,13 @@ export default function GiridharDescription() {
               Experience
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug mt-1">
-              30+ Years 
+              28+ Years
             </p>
           </div>
         </Card>
       </Section>
 
-      <Section title="Education">
+      {/* <Section title="Education / Certificates">
         <Card>
           <div className="ml-0 sm:ml-6 w-full">
             <h2 className="text-sm text-gray-700 mb-2 font-semibold">
@@ -117,13 +126,22 @@ export default function GiridharDescription() {
             </h2>
             <ul className="list-disc ml-5 text-gray-800 space-y-1 text-sm md:text-base">
               <li>
-               M.S. (PGIMER)
+                MBBS - All India Institute of Medical Sciences (AIIMS), New
+                Delhi, 2005
+              </li>
+              <li>
+                MS (General Surgery) - Maulana Azad Medical College, New Delhi,
+                2009
+              </li>
+              <li>
+                MCh (Urology) - Postgraduate Institute of Medical Education and
+                Research (PGIMER), Chandigarh, 2013
               </li>
             </ul>
           </div>
         </Card>
 
-        {/* <Card>
+        <Card>
           <div className="ml-0 sm:ml-6 w-full">
             <h2 className="text-sm text-gray-700 mb-2 font-semibold">
               Certifications
@@ -140,8 +158,8 @@ export default function GiridharDescription() {
               <li>Certified in Advanced Laparoscopic and Robotic Surgery</li>
             </ul>
           </div>
-        </Card> */}
-      </Section>
+        </Card>
+      </Section> */}
     </div>
   );
 }
