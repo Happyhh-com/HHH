@@ -133,7 +133,7 @@ export default function Services() {
                 }`}
             ></div>
 
-            <p
+            {/* <p
               onClick={() => setActive("General Surgical Procedures")}
               className={`cursor-pointer my-6 text-lg ${active === "General Surgical Procedures"
                   ? "text-white"
@@ -147,7 +147,7 @@ export default function Services() {
                   ? "bg-white"
                   : "bg-gray-500"
                 }`}
-            ></div>
+            ></div> */}
 
             <p
               onClick={() => setActive("Chronic & Lifestyle Diseases")}
@@ -176,7 +176,7 @@ export default function Services() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4 ">
               <div
-                onClick={() => router.push("/services/chronickidneydisease")}
+                onClick={() => router.push("/services/kidneystone")}
                 className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4 cursor-pointer"
               >
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
@@ -189,7 +189,9 @@ export default function Services() {
                 <span className="font-medium text-white">Kidney Stones</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/prostatecare")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Prostate.png"
@@ -200,7 +202,9 @@ export default function Services() {
                 <span className="font-medium text-white">Prostate</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/bladderhealth")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Bladder Tumors.png"
@@ -211,7 +215,9 @@ export default function Services() {
                 <span className="font-medium text-white">Bladder Tumors</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/plasticcosmeticsurgery")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Cosmetic & Plastic Surgeries.png"
@@ -224,7 +230,7 @@ export default function Services() {
                 </span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              {/* <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Varicose Veins.png"
@@ -233,7 +239,7 @@ export default function Services() {
                   />
                 </div>
                 <span className="font-medium text-white">Varicose Veins</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -246,7 +252,7 @@ export default function Services() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+              {/* <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Prostatectomy.png"
@@ -255,9 +261,11 @@ export default function Services() {
                   />
                 </div>
                 <span className="font-medium text-white">Prostatectomy</span>
-              </div>
+              </div> */}
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/nephrology")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Nephrectomy.png"
@@ -268,7 +276,7 @@ export default function Services() {
                 <span className="font-medium text-white">Nephrectomy</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              {/* <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Appendix Removal.png"
@@ -312,7 +320,8 @@ export default function Services() {
                   />
                 </div>
                 <span className="font-medium text-white">Hernia Repair</span>
-              </div>
+              </div> */}
+
             </div>
           </div>
 
@@ -327,7 +336,9 @@ export default function Services() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+              <div 
+              onClick={() => router.push("/services/diagnosticssupportservices")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Advanced internal diagnostics.png"
@@ -351,7 +362,9 @@ export default function Services() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4">
+              <div 
+              onClick={() => router.push("/services/generalmedicine")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/General Medicine.png"
@@ -362,7 +375,9 @@ export default function Services() {
                 <span className="font-medium text-white">General Medicine</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/nephrology")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Nephrology.png"
@@ -373,7 +388,9 @@ export default function Services() {
                 <span className="font-medium text-white">Nephrology</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/ent")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/ENT.png"
@@ -384,7 +401,9 @@ export default function Services() {
                 <span className="font-medium text-white">ENT</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/orthopedics")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Orthopedics.png"
@@ -397,7 +416,9 @@ export default function Services() {
                 </span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/cardiology")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Cardiology.png"
@@ -408,7 +429,9 @@ export default function Services() {
                 <span className="font-medium text-white">Cardiology</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/nutritiondietetics")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Dietician Nutrition.png"
@@ -421,7 +444,9 @@ export default function Services() {
                 </span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/plasticcosmeticsurgery")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Plastic & Cosmetic Surgery.png"
@@ -434,20 +459,22 @@ export default function Services() {
                 </span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/neurology")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
-                    src="/assets/services/Ophthalmology.png"
-                    alt="Ophthalmology"
+                    src="/assets/services/Neurology.png"
+                    alt="Neurology"
                     className="h-[3vh] w-[3vw] object-contain"
                   />
                 </div>
-                <span className="font-medium text-white">Ophthalmology</span>
+                <span className="font-medium text-white">Neurology</span>
               </div>
             </div>
           </div>
 
-          <div
+          {/* <div
             className={`${active === "General Surgical Procedures" ? "block" : "hidden"
               } mx-20 w-[76%]`}
           >
@@ -517,7 +544,7 @@ export default function Services() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div
             className={`${active === "Chronic & Lifestyle Diseases" ? "block" : "hidden"
@@ -528,7 +555,9 @@ export default function Services() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 my-4">
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4 cursor-pointer ">
+              <div 
+              onClick={() => router.push("/services/chronickidneydisease")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-1 px-4 cursor-pointer ">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Chronic Kidney Disease (CKD).png"
@@ -542,10 +571,10 @@ export default function Services() {
               </div>
 
               <div
-                onClick={() => router.push("/services/chronickidneydisease")}
-                className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 "
+                onClick={() => router.push("/services/kidneystone")}
+                className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer"
               >
-                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh] cursor-pointer">
+                <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Kidney Stones.png"
                     alt="Kidney Stones"
@@ -555,7 +584,9 @@ export default function Services() {
                 <span className="font-medium text-white">Kidney Stones</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              <div 
+              onClick={() => router.push("/services/prostatecare")}
+              className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4 cursor-pointer">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Prostate Health.png"
@@ -566,7 +597,7 @@ export default function Services() {
                 <span className="font-medium text-white">Prostate Health</span>
               </div>
 
-              <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
+              {/* <div className="flex bg-[#2B7B3724] rounded-xl items-center gap-x-6 py-3 px-4">
                 <div className="flex items-center justify-center bg-[#2B7B37] rounded-lg h-[6vh] w-[6vh]">
                   <img
                     src="/assets/services/Diabetes Management.png"
@@ -577,7 +608,7 @@ export default function Services() {
                 <span className="font-medium text-white block whitespace-normal break-words text-base leading-relaxed">
                   Diabetes Management
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
