@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 
 export const metadata = {
-  title: "My Next.js App",
+  title: "Happy Healthy Hospitals ",
   description: "App using shared layout with Header",
 };
 
