@@ -14,19 +14,17 @@ export default function AppointmentModal() {
 
     const formData = new FormData(e.target);
 
-    const payload = {
-      appointmentDetails: {
+    const payload =  {
         id: 0,
-        patientName: formData.get("name"),
-        phoneNumber: formData.get("phone"),
-        email: formData.get("email"),
-        patientMessage: formData.get("message"),
+        PatientName: formData.get("name"),
+        PhoneNumber: formData.get("phone"),
+        Email: formData.get("email"),
+        PatientMessage: formData.get("message"),
         createdDateTime: new Date().toISOString(),
-      },
-    };
+      };
 
     try {
-      const res = await fetch("https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/AppointmentDetails/post_AssigmentDetails", {
+      const res = await fetch("https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Appointment/postAppointmentDetails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

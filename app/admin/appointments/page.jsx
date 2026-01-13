@@ -21,14 +21,24 @@ export default function Appointments() {
   useEffect(() => {
     async function fetchAppointments() {
       try {
-        const res = await fetch("https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/AppointmentDetails/get_AppointmentDetails"); // 🔹 replace with real API
+        const res = await fetch(
+          "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Appointment/getAppointmentList",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}), // send empty object if API expects body
+          }
+        );
 
         if (!res.ok) {
           throw new Error("Failed to fetch appointments");
         }
 
-        const data = await res.json();        
-        setAppointments(data?.appointmentDetails);
+        const data = await res.json();
+
+        setAppointments(data?.AppointmentsList || []);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -50,9 +60,7 @@ export default function Appointments() {
           Home
         </span>
         <span>/</span>
-        <span className="text-[#2B7B37] cursor-pointer">
-          Appointments
-        </span>
+        <span className="text-[#2B7B37] cursor-pointer">Appointments</span>
       </div>
 
       <p className="font-bold mt-11 mb-5 ml-19 text-4xl text-[#203169]">
@@ -67,11 +75,7 @@ export default function Appointments() {
       )}
 
       {/* Error */}
-      {error && (
-        <p className="text-red-500 text-center my-10">
-          {error}
-        </p>
-      )}
+      {error && <p className="text-red-500 text-center my-10">{error}</p>}
 
       {/* Table */}
       {!loading && !error && (
