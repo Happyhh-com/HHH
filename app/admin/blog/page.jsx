@@ -155,9 +155,19 @@ export default function Blog(props) {
         return;
       }
 
-      const res = await fetch(
-        `https://localhost:727/Blog/get_BlogByID?Id=${blogId}`
-      );
+      try {
+        const res = await fetch(
+          `https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogByID?Id=${blogId}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+      } catch (err) {
+        console.error("Failed to load blog:", err);
+      }
 
       const data = await res.json();
       console.log("data", data);
@@ -192,14 +202,22 @@ export default function Blog(props) {
       }
     });
 
-    // Send JSON
-    await fetch("https://localhost:727/Blog/insert_Blog", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formObj),
-    });
+    try {
+      const res = await fetch(
+        "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/postBlogDetails",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formObj),
+        }
+      )
+    } catch (err) {
+      console.error("Failed to load blog:", err);
+    }
+
+
   };
 
   if (loading)
