@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ✅ CUSTOM TAILWIND CLASSES */
+@layer components {
+  .footer-link {
+    @apply text-gray-700 hover:text-blue-600 transition text-sm cursor-pointer;
+  }
+
+  .footer-text {
+    @apply text-gray-700 text-sm;
+  }
+   .social-icon {
+    @apply w-6 h-6 cursor-pointer hover:scale-110 hover:opacity-80 transition;
+  }
+}

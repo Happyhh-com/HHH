@@ -225,20 +225,26 @@ export default function Blogs() {
     FP2: "Final paragraph 2",
   };
 
-  useEffect(async function fetchBlogs() {
-    const res = await fetch(
-      "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogsList",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({}), // send empty object if API expects body
-      }
-    );
-    const data = await res.json();
-    setBlogsList(data?.Blogs || []);
+  useEffect(() => {
+    async function fetchBlogs() {
+      const res = await fetch(
+        "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogsList",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({}),
+        }
+      );
+
+      const data = await res.json();
+      setBlogsList(data?.Blog || []); // 👈 make sure key is correct
+    }
+
+    fetchBlogs();
   }, []);
+
   const handleEdit = (id) => {
     router.push(`/admin/blog?blogId=${id}`);
   };
@@ -291,7 +297,7 @@ export default function Blogs() {
               );
               return (
                 <tr
-                  key={s.id}
+                  key={s.Id}
                   className="border-b hover:bg-green-50 transition-colors"
                 >
                   <td className="py-3 px-4 text-left w-[20%]">{index + 1}</td>

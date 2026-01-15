@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
   const imageUrl = "/assets/Tempblogs/temp_blog_pic.jpg";
 
   useEffect(() => {
@@ -23,11 +24,11 @@ export default function Blogs() {
         );
 
         const data = await res.json();
-        console.log("API response:", data);
-
         setBlogs(data?.Blog || []);
       } catch (error) {
         console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -40,7 +41,7 @@ export default function Blogs() {
 
   return (
     <>
-            <div className="flex space-x-2 font-semibold text-gray-400 mt-11 ml-19">
+      <div className="flex space-x-2 font-semibold text-gray-400 mt-11 ml-19">
         <span
           onClick={() => router.push("/")}
           className="cursor-pointer hover:underline"
@@ -62,6 +63,12 @@ export default function Blogs() {
         stay healthy, our articles are written by experienced doctors and
         healthcare professionals to keep you informed and empowered.
       </div>
+
+      {loading && (
+        <div className="flex justify-center mt-10">
+          <div className="animate-spin h-10 w-10 border-4 border-green-600 border-t-transparent rounded-full"></div>
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-4 mx-19 my-10">
         {blogs.map((blog) => (
           <div key={blog.Id} className="grid grid-cols-2 gap-4 mb-8">

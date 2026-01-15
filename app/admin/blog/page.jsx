@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect, use } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Blog(props) {
+  const router = useRouter();
   const searchParams = use(props.searchParams);
   const blogId = searchParams?.blogId;
 
@@ -140,7 +142,7 @@ export default function Blog(props) {
     "FB8",
     "FB9",
     "FB10",
-    "FP2"
+    "FP2",
   ];
 
   useEffect(() => {
@@ -164,21 +166,22 @@ export default function Blog(props) {
               "Content-Type": "application/json",
             },
           }
-        )
+        );
+        const data = await res.json();
+        console.log("data", data?.Blog?.[0]);
+
+        const blog = data?.Blog?.[0] || {};
+
+        const filled = entityProperties.reduce((acc, key) => {
+          acc[key] = blog[key] ?? "";
+          return acc;
+        }, {});
+
+        setFormData(filled);
+        setLoading(false);
       } catch (err) {
         console.error("Failed to load blog:", err);
       }
-
-      const data = await res.json();
-      console.log("data", data);
-
-      const filled = data.reduce((acc, key) => {
-        acc[key] = data[key] ?? "";
-        return acc;
-      }, {});
-
-      setFormData(filled);
-      setLoading(false);
     }
 
     fetchBlog();
@@ -190,34 +193,45 @@ export default function Blog(props) {
     const formObj = {};
 
     // Convert form fields (HTML inputs) into an object
+
     const fd = new FormData(e.target);
     fd.forEach((value, key) => {
-      formObj[key] = value;
+      if (!blogId && key !== "Id") {
+        formObj[key] = value;
+      }
     });
 
     // Include any missing values from formData state
     Object.keys(formData).forEach((key) => {
+      if (!blogId && key === "Id") return;
+
       if (!formObj.hasOwnProperty(key)) {
         formObj[key] = formData[key] ?? "";
       }
     });
 
     try {
-      const res = await fetch(
-        "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/postBlogDetails",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formObj),
-        }
-      )
+      const url = blogId
+        ? `https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/putBlogDetails?id=${blogId}`
+        : "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/postBlogDetails";
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formObj),
+      });
     } catch (err) {
       console.error("Failed to load blog:", err);
     }
+  };
 
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   if (loading)
@@ -267,7 +281,8 @@ export default function Blog(props) {
                 <textarea
                   name={prop}
                   className="border border-gray-300 rounded-xl bg-white p-2"
-                  defaultValue={formData[prop]}
+                  value={formData[prop] || ""}
+                  onChange={handleChange}
                 />
               </div>
             ))}

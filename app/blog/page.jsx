@@ -152,7 +152,7 @@ export default function Blog() {
         async function fetchBlog() {
             try {
                 const res = await fetch(
-                    "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogByID?id=6",
+                    `https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogByID?id=${blogId}`,
                     {
                         method: "POST",
                         headers: {
@@ -404,7 +404,7 @@ export default function Blog() {
             {formData["Final_Overview"] && (
                 <p className="mx-19 mt-5 font-bold">{formData["Final_Overview"]}</p>
             )}
-            {formData["FP1"] && <p className="mx-19">{formData["FP1"]}</p>}
+            {formData["FP1"] && <p className="mx-19 ">{formData["FP1"]}</p>}
             <ul className="mx-19 list-disc pl-5">
                 {formData["FB1"] && <li>{formData["FB1"]}</li>}
                 {formData["FB2"] && <li>{formData["FB2"]}</li>}
@@ -417,7 +417,7 @@ export default function Blog() {
                 {formData["FB9"] && <li>{formData["FB9"]}</li>}
                 {formData["FB10"] && <li>{formData["FB10"]}</li>}
             </ul>
-            {formData["FP2"] && <p className="mx-19">{formData["FP2"]}</p>}
+            {formData["FP2"] && <p className="mx-19 mt-5">{formData["FP2"]}</p>}
 
             <div className="mb-10"></div>
         </>
