@@ -14,6 +14,7 @@ export default function Blog(props) {
         "Id",
         // "Image",
         "Title",
+        "BlogDescription",
         "P1",
         "P2",
         "H1",
@@ -173,6 +174,7 @@ export default function Blog(props) {
     return (
         <>
             {formData["Title"] && (<p className="mx-19 font-bold text-2xl mt-10 text-green-500 mb-3">{formData["Title"]}</p>)}
+            {formData["BlogDescription"] && (<p className="mx-19">{formData["BlogDescription"]}</p>)}
             {formData["P1"] && (<p className="mx-19">{formData["P1"]}</p>)}
             {formData["P2"] && (<p className="mx-19">{formData["P2"]}</p>)}
 
