@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       <div className="p-10 bg-green-50 font-medium">
         <span onClick={() => setVisionActive(true)} className={`ml-11 inline-flex items-center justify-center h-10 px-3 cursor-pointer transition ${isVisionActive ? 'text-white bg-green-700' : 'hover:underline'}`}>Vision</span>
-        <span onClick={() => setVisionActive(false)} className={`ml-8 inline-flex items-center justify-center h-10 px-3 cursor-pointer transition ${!isVisionActive ? 'text-white bg-green-700' : 'hover:underline'}`}>Mission</span>
+        {/* <span onClick={() => setVisionActive(false)} className={`ml-8 inline-flex items-center justify-center h-10 px-3 cursor-pointer transition ${!isVisionActive ? 'text-white bg-green-700' : 'hover:underline'}`}>Mission</span> */}
       </div>
 
       <p className="px-8 mx-11 my-4">At HealthFirst, we envision a world where every individual has access to comprehensive healthcare services tailored to their unique needs. Our mission is to empower communities through innovative solutions that promote wellness and preventive care. We believe in a future where technology bridges the gap between patients and providers, ensuring timely and effective treatment.</p>

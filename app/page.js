@@ -8,6 +8,9 @@ import AppointmentModal from "../components/AppointmentModal";
 import { useRef, useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const imageUrl = "/assets/Tempblogs/temp_blog_pic.jpg";
   const router = useRouter();
   const scrollRef = useRef(null);
   const { openModal } = useModal();
@@ -20,6 +23,36 @@ export default function HomePage() {
   ];
 
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
+        const res = await fetch(
+          "https://happyhealthyhospital-auh0b2dsctfab7bf.canadacentral-01.azurewebsites.net/Blog/getBlogsList",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+          }
+        );
+
+        const data = await res.json();
+        setBlogs(data?.Blog?.slice(0, 4) || []);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchBlogs();
+  }, []);
+
+  const handleReadMore = (id) => {
+    router.push(`/blog?blogId=${id}`);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -518,6 +551,52 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div>
+        <div className="flex items-center justify-between px-[5vw] mt-11 mb-5">
+          <p className="font-bold text-4xl text-[#203169]">Our Latest Blogs</p>
+
+          <button
+            className="text-white bg-[#AD2525] rounded-3xl w-[12vw] px-8 py-3 font-medium whitespace-nowrap"
+            onClick={() => router.push("/blogs")}
+          >
+            View All
+          </button>
+        </div>
+
+        {loading && (
+          <div className="flex justify-center mt-10">
+            <div className="animate-spin h-10 w-10 border-4 border-green-600 border-t-transparent rounded-full"></div>
+          </div>
+        )}
+        <div className="grid grid-cols-2 gap-4 mx-19 my-10">
+          {blogs.map((blog) => (
+            <div key={blog.Id} className="grid grid-cols-2 gap-4 mb-8">
+              <div className="aspect-[268/212]">
+                <img
+                  src={imageUrl}
+                  alt={blog.Title}
+                  className="rounded-sm h-full w-full object-cover"
+                />
+              </div>
+
+              <div className="ml-5">
+                <p className="text-[#14141491] mb-2">{blog.CreatedDate}</p>
+
+                <p className="text-[#2B7B37] mb-2 font-bold">{blog.Title}</p>
+
+                <p className="mb-2 line-clamp-3">{blog.BlogDescription}</p>
+
+                <p
+                  className="text-[#AD2525] font-bold underline cursor-pointer"
+                  onClick={() => handleReadMore(blog.Id)}
+                >
+                  Read More
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div>
         <img
           src="/assets/home/Emergency & Ambulance Support.png"

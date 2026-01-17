@@ -25,17 +25,18 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#E9F3FFC7] backdrop-blur-md h-[15vh] flex items-center px-[5vw] text-gray-700">
-      <section
-        className="flex items-center cursor-pointer"
+    <header className="sticky top-0 z-50 bg-[#E9F3FF] backdrop-blur-md h-[15vh] flex items-center px-[5vw] relative overflow-hidden">
+      {/* LOGO */}
+      <div
+        className="flex items-center h-[15vh] max-h-[140px]"
         onClick={() => router.push("/")}
       >
         <img
-          src="/assets/header/logo.png"
-          alt="Logo"
-          className="w-[220px] h-auto mt-[7.5vh] object-contain"
+          src="/assets/header/logo4.png"
+          alt="Happy Healthy Hospital"
+          className="h-[15vh] w-[15vw] object-contain"
         />
-      </section>
+      </div>
 
       <div className="ml-auto flex items-center gap-10">
         <nav className="flex items-center gap-10">
